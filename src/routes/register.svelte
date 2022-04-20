@@ -29,7 +29,7 @@
         <br />
         <div class="stamp">
           <a class="logo" href="https://communityfolder.com">
-            /client_area/register/
+            /community_folder/register/
           </a>
         </div>
         <div class="single"></div>

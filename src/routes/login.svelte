@@ -14,7 +14,7 @@
       <div class="navigation">
         <a href="/login" class="btn btn-small teal lighten-2">LOGIN</a>
         <a href="/register" class="btn btn-small teal lighten-2">REGISTER</a>
-        <a href="https://support.communityfolder.com" class="btn btn-small teal lighten-2">SUPPORT</a>
+        <a href="https://www.communityfolder.com" class="btn btn-small teal lighten-2">WWW</a>
       </div>
       <div class="title">
         <a href="/">
@@ -29,7 +29,7 @@
         <br />
         <div class="stamp">
           <a class="logo" href="https://communityfolder.com">
-            /client_area/login/
+            /community_folder/login/
           </a>
         </div>
         <div class="single"></div>
