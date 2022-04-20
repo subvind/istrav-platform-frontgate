@@ -1,6 +1,6 @@
 
 <svelte:head>
-  <title>/community_folder/</title>
+  <title>Welcome - /community_folder/</title>
 </svelte:head>
 
 <div class="container">
