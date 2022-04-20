@@ -78,6 +78,7 @@
 
   footer {
     text-align: center;
+    color: #aaa;
   }
 
   a {
