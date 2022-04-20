@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Login - Client Area - /community_folder/</title>
+  <title>Login - Social Group - /community_folder/</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 </svelte:head>
