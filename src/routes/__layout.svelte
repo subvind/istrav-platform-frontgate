@@ -12,7 +12,10 @@
     let hostname = window.location.hostname
     if (hostname === 'localhost' || hostname === '127.0.0.1') {
       // configure server
-      backend.set(`http://${hostname}:1337`)
+      backend.set(`http://192.168.10.97:3000`)
+    } else if (hostname === 'web-station') {
+      // configure server
+      backend.set(`http://developer-station:3000`)
     } else {
       // grab last 2 host words from url
       // let words = hostname.split('.')
