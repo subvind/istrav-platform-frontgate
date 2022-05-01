@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Login - /community_folder/</title>
+  <title>Login: /community_folder/</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 </svelte:head>

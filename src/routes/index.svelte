@@ -1,6 +1,6 @@
 
 <svelte:head>
-  <title>Welcome - /community_folder/</title>
+  <title>/community_folder/: Bulletin Board Software</title>
 </svelte:head>
 
 <div class="container">
