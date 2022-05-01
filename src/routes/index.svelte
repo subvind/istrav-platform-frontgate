@@ -2,6 +2,7 @@
   import Navigation from '../components/Navigation.svelte';
   import Browser from '../components/Browser.svelte'
   import Footer from '../components/Footer.svelte'
+  import Marketing from '../components/Marketing.svelte'
 </script>
 
 <svelte:head>
@@ -11,6 +12,8 @@
 <Navigation />
 
 <Browser />
+
+<Marketing />
 
 <div class="container">
   <div class="community">
