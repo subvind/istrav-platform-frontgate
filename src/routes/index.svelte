@@ -1,10 +1,14 @@
 <script>
-  import Browser from '../components/browser.svelte'
+  import Navigation from '../components/Navigation.svelte';
+  import Browser from '../components/Browser.svelte'
+  import Footer from '../components/Footer.svelte'
 </script>
 
 <svelte:head>
   <title>/community_folder/: Bulletin Board Software</title>
 </svelte:head>
+
+<Navigation />
 
 <Browser />
 
@@ -59,9 +63,11 @@
   </div>
 </div>
 
+<Footer />
+
 <style>
   .community {
-    padding: 2em 0;
+    padding: 4em 0 5em;
   }
   .folder {
     margin: 4em 0 1em 0;
