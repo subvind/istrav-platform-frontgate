@@ -1,15 +1,20 @@
+<script>
+  import Browser from '../components/browser.svelte'
+</script>
 
 <svelte:head>
   <title>/community_folder/: Bulletin Board Software</title>
 </svelte:head>
 
+<Browser />
+
 <div class="container">
   <div class="community">
     <div class="folder">
       <div class="navigation">
-        <a href="/login" class="btn btn-small teal lighten-2">LOGIN</a>
-        <a href="/register" class="btn btn-small teal lighten-2">REGISTER</a>
-        <a href="https://www.communityfolder.com" class="btn btn-small teal lighten-2">WWW</a>
+        <a href="/login" class="btn btn-small blue lighten-2">LOGIN</a>
+        <a href="/register" class="btn btn-small blue lighten-2">REGISTER</a>
+        <a href="https://www.communityfolder.com" class="btn btn-small blue lighten-2">WWW</a>
       </div>
       <div class="title">
         <a href="/">
