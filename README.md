@@ -1,4 +1,4 @@
-/community_folder/
+/community_folder/ - Company
 =======
 Allows customers to sign into a client area and create/pay/run/manage website(s) or "tenants" that are powered by communityfolder.
 
@@ -18,7 +18,36 @@ containers:
 - https://hub.docker.com/r/istrav/communityfolder-backend
 - https://hub.docker.com/r/istrav/communityfolder-frontend
 
-### node.js
+### web-station
+```bash
+# node.js
+$ curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+$ sudo apt-get install nodejs -y
+
+# show firewall
+$ sudo ufw status verbose
+
+# toggle
+$ sudo ufw enable
+$ sudo ufw disable
+# command line
+$ sudo ufw allow ssh
+$ sudo ufw allow http
+$ sudo ufw allow https
+# app
+$ sudo ufw allow 1337/tcp
+$ sudo ufw allow 1337/udp
+# vnc
+$ sudo ufw allow 5900/tcp
+$ sudo ufw allow 5900/udp
+# apply
+$ sudo ufw reload
+# delete ufw rules
+$ sudo ufw status numbered
+$ sudo ufw delete 3
+```
+
+### run
 ```bash
 # fetch deps
 $ npm install
@@ -42,7 +71,6 @@ $ git add . && git commit -m "version" && git push
 $ git tag v0.0.14
 $ git push --tags
 ```
-
 
 # create-svelte
 
