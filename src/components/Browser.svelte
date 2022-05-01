@@ -3,7 +3,7 @@
   <br />
   <br />
   <h1 class="title">Bulletin Board</h1>
-  <h2 class="description">Incubation software for connecting<br />social groups large and small.</h2>
+  <h2 class="description">The best software for connecting<br />social groups large and small.</h2>
   <br />
   <br />
   <br />
