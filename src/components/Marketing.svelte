@@ -1,4 +1,4 @@
-<div class="page-footer">
+<div class="marketing">
   <br />
   <br />
   <br />
@@ -56,8 +56,13 @@
 </div>
 
 <style>
+  .marketing {
+    background: #4caf50;
+    color: #111;
+  }
   .title {
     text-align: center;
+    color: #111;
   }
 
   .title h3 {
@@ -73,5 +78,8 @@
   ul li {
     margin: 0.5em;
     font-size: 1.5em;
+  }
+  ul li a {
+    color: #111;
   }
 </style>

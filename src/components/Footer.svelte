@@ -2,16 +2,20 @@
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">Footer Content</h5>
-        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        <h5 class="white-text">Source Code</h5>
+        <p class="grey-text text-lighten-4">/community_folder/ is free and open source code. Which means that you may fork this project, modify it, and run it on your own servers. However you'll need a bit of computer knowledge in order to do that. For those not as tech savy, or those that want to take advantage of our awesome support, we provide /community_folder/ hosting in the cloud.</p>
+        <a href="https://github.com/trabur/community_folder" class="btn white black-text">GitHub</a>
+        <br />
+        <br />
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
+        <h5 class="white-text">Pricing Plans</h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Free</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Small</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Medium</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Large</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Enterprise</a></li>
         </ul>
       </div>
     </div>
@@ -27,3 +31,17 @@
     </div>
   </div>
 </footer>
+
+<style>
+
+  ul {
+    /* text-align: center; */
+  }
+
+  ul li {
+    margin: 0.5em 0 0.5em 0;
+  }
+  ul li a {
+    color: #111;
+  }
+</style>
