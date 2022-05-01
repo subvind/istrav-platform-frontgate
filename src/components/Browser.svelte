@@ -1,6 +1,7 @@
 <div class="header">
   <br />
   <br />
+  <br />
   <h1 class="title">Bulletin Board</h1>
   <h2 class="description">Inkubation software for connecting<br />social groups large and small.</h2>
   <br />
