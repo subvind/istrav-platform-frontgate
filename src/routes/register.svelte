@@ -18,9 +18,10 @@
   <div class="community">
     <div class="folder">
       <div class="navigation">
-        <a href="/login" class="btn btn-small blue lighten-2">LOGIN</a>
+        <a href="/" class="btn btn-small grey"><i class="material-icons">folder</i></a>
+        <a href="/login" class="btn btn-small grey">LOGIN</a>
         <a href="/register" class="btn btn-small blue lighten-2">REGISTER</a>
-        <a href="https://www.communityfolder.com" class="btn btn-small blue lighten-2">WWW</a>
+        <a href="https://www.communityfolder.com" class="btn btn-small grey">WWW</a>
       </div>
       <div class="title">
         <a href="/">
