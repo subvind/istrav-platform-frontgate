@@ -35,8 +35,18 @@
 </div>
 
 <div class="panel">
+  <br />
+  <br />
+  <br />
+  <br />
   <div class="container">
-    <a class="waves-effect waves-light btn white black-text">main</a>
+
+    <div style="max-width: 500px; margin: 0 auto;">
+      <h3 class="demo-title">Main Features</h3>
+      <h3 class="demo-description">This application is packed full of controls and displays for running communities online behind browsers and mobile devices.</h3>
+      <p class="demo-detail">(notice: /community_folder/demo/ resets every 1 hour.)</p>
+    </div>
+    <a class="waves-effect waves-light btn white black-text">home</a>
     <a class="waves-effect waves-light btn grey">forums</a>
     <a class="waves-effect waves-light btn grey">topics</a>
     <a class="waves-effect waves-light btn grey">posts</a>
@@ -51,6 +61,11 @@
     <a class="waves-effect waves-light btn grey">calendar</a>
     <a class="waves-effect waves-light btn grey">results</a>
   </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 </div>
 
 <style>
@@ -71,6 +86,25 @@
     font-size: 2.5em;
     margin: 0;
     text-align: center;
+  }
+
+  .demo-title {
+    font-weight: 900;
+    color: #eee;
+    font-size: 3em;
+    margin: 0;
+    text-align: center;
+  }
+
+  .demo-description {
+    color: #eee;
+    font-size: 2em;
+    margin: 0;
+    text-align: center;
+  }
+
+  .demo-detail {
+    font-size: 1.2em;
   }
 
   /* The browser window */

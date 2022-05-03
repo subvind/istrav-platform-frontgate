@@ -3,6 +3,7 @@
   import Browser from '../components/Browser.svelte'
   import Footer from '../components/Footer.svelte'
   import Marketing from '../components/Marketing.svelte'
+  import ClientAreaTitle from '../components/ClientAreaTitle.svelte';
 </script>
 
 <svelte:head>
@@ -16,7 +17,14 @@
 <Marketing />
 
 <div class="container">
+  <br />
+  <br />
+  <br />
   <div class="community">
+    <ClientAreaTitle />
+    <br />
+    <br />
+    <br />
     <div class="folder">
       <div class="navigation">
         <a href="/login" class="btn btn-small blue lighten-2">LOGIN</a>
@@ -64,6 +72,9 @@
     </div>
     <footer>© {new Date().getFullYear()} <a href="https://communityfolder.com">communityfolder.com</a>. All rights reserved.</footer>
   </div>
+  <br />
+  <br />
+  <br />
 </div>
 
 <Footer />

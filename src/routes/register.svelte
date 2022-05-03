@@ -1,5 +1,6 @@
 <script>
   import Register from "../components/auth/Register.svelte";
+  import ClientAreaTitle from '../components/ClientAreaTitle.svelte';
 </script>
 
 <svelte:head>
@@ -9,6 +10,11 @@
 </svelte:head>
 
 <div class="container">
+  <br />
+  <br />
+  <br />
+  <br />
+  <ClientAreaTitle />
   <div class="community">
     <div class="folder">
       <div class="navigation">
@@ -42,6 +48,9 @@
       </div>
     </div>
     <footer>© {new Date().getFullYear()} <a href="https://communityfolder.com">communityfolder.com</a>. All rights reserved.</footer>
+    <br />
+    <br />
+    <br />
   </div>
 </div>
 
