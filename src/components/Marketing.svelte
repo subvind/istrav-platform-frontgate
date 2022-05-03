@@ -41,11 +41,11 @@
           <form class="col s12">
             <div class="row" style="margin: 0;">
               <div class="input-field col s6">
-                <input placeholder="" id="first_name" type="text" class="validate" value={folder}>
+                <input placeholder="" id="first_name" type="text" class="validate" bind:value={folder}>
                 <label for="first_name">Folder</label>
               </div>
               <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate" value={community}>
+                <input id="last_name" type="text" class="validate" bind:value={community}>
                 <label for="last_name">Community</label>
               </div>
             </div>
@@ -119,7 +119,7 @@
         </div>
       </div>
     </div>
-    <p class="detail">(notice: Unlike other social media platforms we are not here to take over and the world. We are simply here to provide Software as a Service (SaaS). That's why we gave ourselves a very specific searchable name "/community_folder/" rather than some abstract idea like "twitter" or "meta"; because we are in the business of code rather than people. That way communityfolder.com Client Area members may obtain a license key from us, fork our code, and with our permission start their own internet servers with their own rules running the same application yet with different branding.)</p>
+    <p class="detail">(notice: Unlike other social media platforms we are not here to take over and the world. We are simply here to provide community oriented Software as a Service (SaaS). That's why we gave ourselves a very specific searchable name "/community_folder/" rather than some abstract idea like "twitter" or "meta"; because we are in the business of code rather than people. That way communityfolder.com Client Area members may obtain a license key from us, fork our code, and with our permission start their own internet servers with their own rules running the same application yet with different branding.)</p>
   </div>
   <br />
   <br />

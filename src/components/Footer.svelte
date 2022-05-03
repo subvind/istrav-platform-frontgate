@@ -2,14 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">Source Code</h5>
-        <p class="grey-text text-lighten-4">/community_folder/ is free and open source code. Which means that you may fork this project, modify it, and run it on your own servers. However you'll need a bit of computer knowledge in order to do that. For those not as tech savy, or those that want to take advantage of our awesome support, we provide cloud hosting (see plans for pricing and details).</p>
+        <h5 class="white-text">Fair Source 25 (v0.9).</h5>
+        <p class="grey-text text-lighten-4">Not open source. Not closed source. The Fair Source License allows everyone to see the source code and makes the software free to use for a limited number of users in your organization. It offers some of the benefits of open source while preserving the ability to charge for the software. <a href="https://fair.io" target="_blank" style="color: #111;">https://fair.io</a></p>
         <a href="https://github.com/trabur/community_folder" class="btn white black-text">GitHub</a>
         <br />
         <br />
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Hosting Plans</h5>
+        <h5 class="white-text">Software Plans</h5>
         <ul>
           <li><a class="grey-text text-lighten-3" href="#!">Free</a></li>
           <li><a class="grey-text text-lighten-3" href="#!">Small</a></li>
