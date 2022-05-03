@@ -132,6 +132,13 @@
 </div>
 
 <style>
+  .container {
+    max-width: 900px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  
   .center {
     text-align: center;
   }
