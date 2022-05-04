@@ -13,16 +13,12 @@
 
 	let username = '';
   let password = '';
-  let websiteId = 'for-example.com';
 
   async function login() {
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
-    if (websiteId === '') return alert('Website ID must be defined.')
 
     axios.post(`${api}/accounts/auth`, {
-      type: 'admin-control-panel',
-      websiteId,
       username,
       password
     })
@@ -31,7 +27,7 @@
         if (response.data) {
           localStorage.setItem('token', response.data)
           let token = parseJwt(response.data)
-          window.location.href = `/admin-control-panel/accounts/${token.accountId}`
+          window.location.href = `/auth/profile`
         } else {
           alert('unable to fetch auth token')
         }
@@ -45,11 +41,8 @@
 
 <div class="contain">
   <div class="card auth" style="margin-top: 0;">
+    <h3 class="title">Login</h3>
     <div class="row">
-      <div class="input-field col s12">
-        <input id="websiteId" type="text" class="validate" bind:value={websiteId}>
-        <label for="websiteId">Website ID</label>
-      </div>
       <div class="input-field col s12">
         <input id="email" type="text" class="validate" bind:value={username}>
         <label for="email">Username</label>
@@ -60,11 +53,21 @@
       </div>
       <br />
       <button style="margin-left: 1em;" type='submit' class="waves-effect black-text green lighten-2 btn" on:click={() => login()}>Submit</button>
+      <a href="/rules" class="btn black grey-text" style="float: right;">RULES</a>
     </div>
+  </div>
+  <div>
+    <a href="/auth/reset" class="btn-flat grey-text">I FORGOT MY PASSWORD</a>
+    <a href="/auth/register" class="waves-effect red lighten-2 btn" style="float: right;">REGISTER</a>
   </div>
 </div>
 
 <style>
+  .title {
+    text-align: center;
+    margin: 0 0 0.5em;
+  }
+
   .contain {
     max-width: 400px;
     margin: 0 auto;

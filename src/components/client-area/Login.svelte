@@ -60,11 +60,9 @@
       </div>
       <br />
       <button style="margin-left: 1em;" type='submit' class="waves-effect black-text green lighten-2 btn" on:click={() => login()}>Submit</button>
-      <a href="/rules" class="btn black grey-text" style="float: right;">RULES</a>
     </div>
   </div>
   <div>
-    <a href="/reset" class="btn-flat grey-text">I FORGOT MY PASSWORD</a>
     <a href="/client-area/register" class="waves-effect red lighten-2 btn" style="float: right;">REGISTER</a>
   </div>
 </div>

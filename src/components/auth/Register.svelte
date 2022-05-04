@@ -17,12 +17,9 @@
   let username = ''
   let subscribe = true
   let agreement = false
-  let websiteId = 'for-example.com'
 
-  async function login(username, password, websiteId) {
+  async function login(username, password) {
     axios.post(`${api}/accounts/auth`, {
-      type: 'admin-control-panel',
-      websiteId,
       username,
       password
     })
@@ -31,7 +28,7 @@
         if (response.data) {
           localStorage.setItem('token', response.data)
           let token = parseJwt(response.data)
-          window.location.href = `/admin-control-panel/${token.accountId}`
+          window.location.href = `/auth/profile`
         } else {
           alert('unable to fetch auth token')
         }
@@ -43,7 +40,6 @@
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
     if (agreement === false) return alert('Agreement must be accepted.')
-    if (websiteId === '') return alert('Website ID must be defined.')
 
     axios.post(`${api}/accounts`, {
       email,
@@ -55,7 +51,7 @@
       .then(function (response) {
         console.log(response)
         if (response.data.agreement) {
-          login(username, password, websiteId)
+          login(username, password)
         } else {
           alert('invalid account')
         }
@@ -69,11 +65,8 @@
 
 <div class="contain">
   <div class="card auth" style="margin-top: 0;">
+    <h3 class="title">Register</h3>
     <div class="row">
-      <div class="input-field col s12">
-        <input id="websiteId" type="text" class="validate" bind:value={websiteId}>
-        <label for="websiteId">Website ID</label>
-      </div>
       <div class="input-field col s12">
         <input id="email" type="email" class="validate" bind:value={email}>
         <label for="email">Email</label>
@@ -111,11 +104,16 @@
   </div>
   <div>
     <a href="/credits" class="btn-flat grey-text">CREDITS</a>
-    <a href="/admin-control-panel/login" class="waves-effect red lighten-2 btn" style="float: right;">LOGIN</a>
+    <a href="/auth/login" class="waves-effect red lighten-2 btn" style="float: right;">LOGIN</a>
   </div>
 </div>
 
 <style>
+  .title {
+    text-align: center;
+    margin: 0 0 0.5em;
+  }
+
   .contain {
     max-width: 400px;
     margin: 0 auto;

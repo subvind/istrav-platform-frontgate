@@ -1,6 +1,7 @@
 <script>
   import Register from "../../components/webmaster/Register.svelte";
   import MainTitle from '../../components/MainTitle.svelte';
+  import NavigationAuth from "../../components/NavigationAuth.svelte";
 </script>
 
 <svelte:head>
@@ -8,6 +9,8 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
 </svelte:head>
+
+<NavigationAuth />
 
 <div class="container">
   <br />

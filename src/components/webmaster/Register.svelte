@@ -12,12 +12,7 @@
 	})
 
   let resumeLink = ''
-	let whyJoinUs = ''
-  let password = ''
-  let passwordRepeat = ''
-  let username = ''
-  let subscribe = true
-  let agreement = false
+	let aboutPosition = ''
 
   async function login(username, password) {
     axios.post(`${api}/accounts/auth`, {
@@ -38,14 +33,11 @@
 
 	async function auth() {
     if (resumeLink === '') return alert('Resume URL must be defined.')
-    if (whyJoinUs === '') return alert('Why Join Us must be defined.')
-    if (agreement === false) return alert('Agreement must be accepted.')
+    if (aboutPosition === '') return alert('About Position must be defined.')
 
     axios.post(`${api}/accounts`, {
       resumeLink,
-      whyJoinUs,
-      subscribe,
-      agreement
+      aboutPosition
     })
       .then(function (response) {
         console.log(response)
@@ -63,34 +55,22 @@
   <div class="card auth" style="margin-top: 0;">
     <div class="row">
       <div class="input-field col s12">
+        <p>The Team:</p>
+        <p>Are you interested in becoming a webmaster? Join an exciting team of developers and coders here at /community_folder/ by submitting your resume to us and then tell us a bit about the position you are applying for.</p>
+      </div>
+      <div class="input-field col s12">
         <input id="resumeLink" type="text" class="validate" bind:value={resumeLink}>
         <label for="resumeLink">Resume URL</label>
       </div>
       <div class="input-field col s12">
-        <textarea id="why" type="text" class="materialize-textarea" bind:value={whyJoinUs}></textarea>
-        <label for="why">Why Join Us?</label>
-      </div>
-      <div class="input-field col s12">
-        <p>
-          <label>
-            <input type="checkbox" bind:checked={subscribe}  />
-            <span style="color: #aaa;">Subscribe to our mailing list.</span>
-          </label>
-        </p>
-        <p>
-          <label>
-            <input type="checkbox" bind:checked={agreement} />
-            <span style="color: #aaa;">I have read and agree to follow the rules.</span>
-          </label>
-        </p>
+        <textarea id="about" type="text" class="materialize-textarea" bind:value={aboutPosition}></textarea>
+        <label for="about">About Position</label>
       </div>
       <br />
       <button style="margin-left: 1em;" type='submit' class="waves-effect black-text green lighten-2 btn" on:click={() => auth()}>Submit</button>
-      <a href="/rules" class="btn black grey-text" style="float: right;">RULES</a>
     </div>
   </div>
   <div>
-    <a href="/credits" class="btn-flat grey-text">CREDITS</a>
     <a href="/webmaster/login" class="waves-effect red lighten-2 btn" style="float: right;">LOGIN</a>
   </div>
 </div>

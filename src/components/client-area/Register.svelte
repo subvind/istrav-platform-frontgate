@@ -71,12 +71,17 @@
   <div class="card auth" style="margin-top: 0;">
     <div class="row">
       <div class="input-field col s12">
-        <input id="tenantId" type="text" class="validate" bind:value={tenantId}>
-        <label for="tenantId">Tenant ID</label>
+        <p>Client Area:</p>
+        <p>To begin, create a Client Area record by signing up here. Then we'll help get your website online and domain names hooked up to internet servers.</p>
       </div>
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate" bind:value={email}>
-        <label for="email">Email</label>
+        <input id="tenantId" type="text" class="validate" bind:value={tenantId}>
+        <label for="tenantId">Tenant ID</label>
+        <p>This ID will be a key to your tenant record within /community_folder/ and must be unique communityfolder.com wide.</p>
+      </div>
+      <div class="input-field col s12">
+        <p>Root Owner:</p>
+        <p>This is the account (username & password) assigned to the Tenant ID above that will have the absolute highest priveledges. Additional accounts may be assigned later.</p>
       </div>
       <div class="input-field col s12">
         <input id="username" type="text" class="validate" bind:value={username}>
@@ -86,31 +91,11 @@
         <input id="password" type="password" class="validate" bind:value={password}>
         <label for="password">Password</label>
       </div>
-      <div class="input-field col s12">
-        <input id="passwordRepeat" type="password" class="validate" bind:value={passwordRepeat}>
-        <label for="passwordRepeat">Password Confirm</label>
-      </div>
-      <div class="input-field col s12">
-        <p>
-          <label>
-            <input type="checkbox" bind:checked={subscribe}  />
-            <span style="color: #aaa;">Subscribe to our mailing list.</span>
-          </label>
-        </p>
-        <p>
-          <label>
-            <input type="checkbox" bind:checked={agreement} />
-            <span style="color: #aaa;">I have read and agree to follow the rules.</span>
-          </label>
-        </p>
-      </div>
       <br />
       <button style="margin-left: 1em;" type='submit' class="waves-effect black-text green lighten-2 btn" on:click={() => auth()}>Submit</button>
-      <a href="/rules" class="btn black grey-text" style="float: right;">RULES</a>
     </div>
   </div>
   <div>
-    <a href="/credits" class="btn-flat grey-text">CREDITS</a>
     <a href="/client-area/login" class="waves-effect red lighten-2 btn" style="float: right;">LOGIN</a>
   </div>
 </div>

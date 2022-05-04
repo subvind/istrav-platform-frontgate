@@ -1,58 +1,43 @@
 <script>
-  import Register from "../../components/admin-control-panel/Register.svelte";
+  import Login from "../../components/auth/Login.svelte";
   import MainTitle from '../../components/MainTitle.svelte';
+  import NavigationAuth from "../../components/NavigationAuth.svelte";
 </script>
 
 <svelte:head>
-  <title>Register: /community_folder/</title>
+  <title>Login: /community_folder/</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 </svelte:head>
+
+<NavigationAuth />
 
 <div class="container">
   <br />
   <br />
   <br />
   <br />
-  <MainTitle title="Admin Control Panel" description="Every website in the Client Area has it's own ACP. From here admins are granted access to Social Groups." />
-  <div class="community">
-    <div class="folder">
-      <div class="navigation">
-        <a href="/" class="btn btn-small grey"><i class="material-icons">folder</i></a>
-        <a href="/admin-control-panel" class="btn btn-small blue lighten-2">ACP</a>
-        <a href="/client-area" class="btn btn-small grey">Client Area</a>
-        <a href="/webmaster" class="btn btn-small grey">Webmaster</a>
-      </div>
-      <div class="title">
-        <a href="/">
-          /community_folder/
-        </a>
-      </div>
-      <div class="box">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <div class="stamp">
-          <a class="logo" href="https://communityfolder.com">
-            /register/
-          </a>
-        </div>
-        <div class="single"></div>
-        <Register />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-      </div>
-    </div>
-    <footer>© {new Date().getFullYear()} <a href="https://communityfolder.com">communityfolder.com</a>. All rights reserved.</footer>
-    <br />
-    <br />
-    <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="stamp">
+    <a class="logo" href="/">
+      /community_folder/
+    </a>
   </div>
+  <div class="single"></div>
+  <Login />
+  <br />
+  <footer>© {new Date().getFullYear()} <a href="https://communityfolder.com">communityfolder.com</a>. All rights reserved.</footer>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 </div>
 
 <style>
@@ -89,7 +74,7 @@
 
   .title {
     display: flex;
-    background-color: #444444;
+    background-color: #444444;    
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23111111' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     font-size: 1.2em;
     width: fit-content;

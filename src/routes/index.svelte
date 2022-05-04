@@ -4,6 +4,7 @@
   import Footer from '../components/Footer.svelte'
   import Marketing from '../components/Marketing.svelte'
   import MainTitle from '../components/MainTitle.svelte';
+  import NavigationAuth from "../components/NavigationAuth.svelte";
 </script>
 
 <svelte:head>
@@ -16,9 +17,9 @@
 
 <Marketing />
 
+<NavigationAuth />
+
 <div class="container">
-  <br />
-  <br />
   <br />
   <div class="community">
     <MainTitle />
@@ -73,7 +74,6 @@
     </div>
     <footer>© {new Date().getFullYear()} <a href="https://communityfolder.com">communityfolder.com</a>. All rights reserved.</footer>
   </div>
-  <br />
   <br />
   <br />
 </div>
