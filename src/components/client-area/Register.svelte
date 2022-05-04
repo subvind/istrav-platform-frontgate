@@ -6,7 +6,7 @@
   import { parseJwt } from '../../parseJwt'
   
   import { backend } from '../../stores.js';
-  let api
+  let api = '';
   backend.subscribe(value => {
 		api = value
 	})
@@ -17,9 +17,12 @@
   let username = ''
   let subscribe = true
   let agreement = false
+  let tenantId = ''
 
-  async function login(username, password) {
-    axios.post(`${api}/users/auth`, {
+  async function login(username, password, tenantId) {
+    axios.post(`${api}/accounts/auth`, {
+      type: 'client-area',
+      tenantId,
       username,
       password
     })
@@ -28,7 +31,7 @@
         if (response.data) {
           localStorage.setItem('token', response.data)
           let token = parseJwt(response.data)
-          window.location.href = `/members/${token.userId}`
+          window.location.href = `/client-area/accounts/${token.accountId}`
         } else {
           alert('unable to fetch auth token')
         }
@@ -40,8 +43,9 @@
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
     if (agreement === false) return alert('Agreement must be accepted.')
+    if (tenantId === '') return alert('Tenant ID must be defined.')
 
-    axios.post(`${api}/users`, {
+    axios.post(`${api}/accounts`, {
       email,
       username,
       password,
@@ -51,9 +55,9 @@
       .then(function (response) {
         console.log(response)
         if (response.data.agreement) {
-          login(username, password)
+          login(username, password, tenantId)
         } else {
-          alert('invalid user')
+          alert('invalid account')
         }
       })
   }
@@ -99,7 +103,7 @@
   </div>
   <div>
     <a href="/credits" class="btn-flat grey-text">CREDITS</a>
-    <a href="/login" class="waves-effect red lighten-2 btn" style="float: right;">LOGIN</a>
+    <a href="/client-area/login" class="waves-effect red lighten-2 btn" style="float: right;">LOGIN</a>
   </div>
 </div>
 

@@ -6,28 +6,32 @@
   import { parseJwt } from '../../parseJwt'
 
   import { backend } from '../../stores.js';
-  let api
+  let api = '';
   backend.subscribe(value => {
 		api = value
 	})
 
 	let username = '';
   let password = '';
+  let tenantId = '';
 
   async function login() {
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
+    if (tenantId === '') return alert('Tenant ID must be defined.')
 
-    axios.post(`${api}/users/auth`, {
+    axios.post(`${api}/accounts/auth`, {
+      type: 'client-area',
+      tenantId,
       username,
-      password
+      password,
     })
       .then(function (response) {
         console.log(response)
         if (response.data) {
           localStorage.setItem('token', response.data)
           let token = parseJwt(response.data)
-          window.location.href = `/members/${token.userId}`
+          window.location.href = `/client-area/accounts/${token.userId}`
         } else {
           alert('unable to fetch auth token')
         }
@@ -53,7 +57,7 @@
   </div>
   <div>
     <a href="/reset" class="btn-flat grey-text">I FORGOT MY PASSWORD</a>
-    <a href="/register" class="waves-effect red lighten-2 btn" style="float: right;">REGISTER</a>
+    <a href="/client-area/register" class="waves-effect red lighten-2 btn" style="float: right;">REGISTER</a>
   </div>
 </div>
 

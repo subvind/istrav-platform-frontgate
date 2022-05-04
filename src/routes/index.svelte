@@ -3,7 +3,7 @@
   import Browser from '../components/Browser.svelte'
   import Footer from '../components/Footer.svelte'
   import Marketing from '../components/Marketing.svelte'
-  import ClientAreaTitle from '../components/ClientAreaTitle.svelte';
+  import MainTitle from '../components/MainTitle.svelte';
 </script>
 
 <svelte:head>
@@ -21,16 +21,16 @@
   <br />
   <br />
   <div class="community">
-    <ClientAreaTitle />
+    <MainTitle />
     <br />
     <br />
     <br />
     <div class="folder">
       <div class="navigation">
         <a href="/" class="btn btn-small blue lighten-2"><i class="material-icons">folder</i></a>
-        <a href="/login" class="btn btn-small grey">LOGIN</a>
-        <a href="/register" class="btn btn-small grey">REGISTER</a>
-        <a href="https://www.communityfolder.com" class="btn btn-small grey">WWW</a>
+        <a href="/admin-control-panel" class="btn btn-small grey">ACP</a>
+        <a href="/client-area" class="btn btn-small grey">Client Area</a>
+        <a href="/webmaster" class="btn btn-small grey">Webmaster</a>
       </div>
       <div class="title">
         <a href="/">

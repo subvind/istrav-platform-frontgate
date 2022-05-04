@@ -1,6 +1,6 @@
 <script>
-  import Register from "../components/auth/Register.svelte";
-  import ClientAreaTitle from '../components/ClientAreaTitle.svelte';
+  import Register from "../../components/webmaster/Register.svelte";
+  import MainTitle from '../../components/MainTitle.svelte';
 </script>
 
 <svelte:head>
@@ -14,14 +14,14 @@
   <br />
   <br />
   <br />
-  <ClientAreaTitle />
+  <MainTitle title="Webmaster" description="A simple control panel for working with customers in the Client Area." />
   <div class="community">
     <div class="folder">
       <div class="navigation">
         <a href="/" class="btn btn-small grey"><i class="material-icons">folder</i></a>
-        <a href="/login" class="btn btn-small grey">LOGIN</a>
-        <a href="/register" class="btn btn-small blue lighten-2">REGISTER</a>
-        <a href="https://www.communityfolder.com" class="btn btn-small grey">WWW</a>
+        <a href="/admin-control-panel" class="btn btn-small grey">ACP</a>
+        <a href="/client-area" class="btn btn-small grey">Client Area</a>
+        <a href="/webmaster" class="btn btn-small blue lighten-2">Webmaster</a>
       </div>
       <div class="title">
         <a href="/">
@@ -36,7 +36,7 @@
         <br />
         <div class="stamp">
           <a class="logo" href="https://communityfolder.com">
-            /community_folder/register/
+            /register/
           </a>
         </div>
         <div class="single"></div>
