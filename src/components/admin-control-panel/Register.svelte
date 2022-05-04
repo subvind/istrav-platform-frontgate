@@ -17,12 +17,12 @@
   let username = ''
   let subscribe = true
   let agreement = false
-  let socialGroupId = ''
+  let websiteId = ''
 
-  async function login(username, password, socialGroupId) {
+  async function login(username, password, websiteId) {
     axios.post(`${api}/accounts/auth`, {
       type: 'admin-control-panel',
-      socialGroupId,
+      websiteId,
       username,
       password
     })
@@ -43,7 +43,7 @@
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
     if (agreement === false) return alert('Agreement must be accepted.')
-    if (socialGroupId === '') return alert('SocialGroup ID must be defined.')
+    if (websiteId === '') return alert('Website ID must be defined.')
 
     axios.post(`${api}/accounts`, {
       email,
@@ -55,7 +55,7 @@
       .then(function (response) {
         console.log(response)
         if (response.data.agreement) {
-          login(username, password, socialGroupId)
+          login(username, password, websiteId)
         } else {
           alert('invalid account')
         }
@@ -66,6 +66,10 @@
 <div class="contain">
   <div class="card auth" style="margin-top: 0;">
     <div class="row">
+      <div class="input-field col s12">
+        <input id="websiteId" type="text" class="validate" bind:value={websiteId}>
+        <label for="websiteId">Website ID</label>
+      </div>
       <div class="input-field col s12">
         <input id="email" type="email" class="validate" bind:value={email}>
         <label for="email">Email</label>

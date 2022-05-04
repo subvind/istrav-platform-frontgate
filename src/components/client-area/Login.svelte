@@ -43,6 +43,10 @@
   <div class="card auth" style="margin-top: 0;">
     <div class="row">
       <div class="input-field col s12">
+        <input id="tenantId" type="text" class="validate" bind:value={tenantId}>
+        <label for="tenantId">Tenant ID</label>
+      </div>
+      <div class="input-field col s12">
         <input id="email" type="text" class="validate" bind:value={username}>
         <label for="email">Username</label>
       </div>
