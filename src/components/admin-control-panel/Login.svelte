@@ -47,6 +47,9 @@
   <div class="card auth" style="margin-top: 0;">
     <div class="row">
       <div class="input-field col s12">
+        <p>The contents behind this folder are secured behind cryptography because of it's sensitive nature it is kept behind a lock and key. Only users that have been given permission through the Client Area are allowed access here.</p>
+      </div>
+      <div class="input-field col s12">
         <input id="websiteId" type="text" class="validate" bind:value={websiteId}>
         <label for="websiteId">Website ID</label>
       </div>
