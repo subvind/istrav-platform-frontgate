@@ -13,7 +13,7 @@
 
 	let username = '';
   let password = '';
-  let websiteId = '';
+  let websiteId = 'for-example.com';
 
   async function login() {
     if (username === '') return alert('Username must be defined.')
@@ -37,6 +37,10 @@
         }
       })
   }
+
+  onMount(() => {
+    window.M.updateTextFields();
+  })
 </script>
 
 <div class="contain">

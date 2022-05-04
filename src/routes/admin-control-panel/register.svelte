@@ -14,7 +14,7 @@
   <br />
   <br />
   <br />
-  <MainTitle title="Admin Control Panel" description="Every website in the Client Area has it's own ACP. From here admins may run and manage Social Groups." />
+  <MainTitle title="Admin Control Panel" description="Every website in the Client Area has it's own ACP. From here admins are granted access to Social Groups." />
   <div class="community">
     <div class="folder">
       <div class="navigation">

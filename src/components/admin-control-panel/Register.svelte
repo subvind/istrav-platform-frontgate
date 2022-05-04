@@ -17,7 +17,7 @@
   let username = ''
   let subscribe = true
   let agreement = false
-  let websiteId = ''
+  let websiteId = 'for-example.com'
 
   async function login(username, password, websiteId) {
     axios.post(`${api}/accounts/auth`, {
@@ -61,6 +61,10 @@
         }
       })
   }
+  
+  onMount(() => {
+    window.M.updateTextFields();
+  })
 </script>
 
 <div class="contain">
