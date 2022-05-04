@@ -11,7 +11,8 @@
 		api = value
 	})
 
-	let email = ''
+  let resumeLink = ''
+	let whyJoinUs = ''
   let password = ''
   let passwordRepeat = ''
   let username = ''
@@ -36,22 +37,21 @@
   }
 
 	async function auth() {
-    if (email === '') return alert('Email must be defined.')
-    if (username === '') return alert('Username must be defined.')
-    if (password === '') return alert('Password must be defined.')
+    if (resumeLink === '') return alert('Resume URL must be defined.')
+    if (whyJoinUs === '') return alert('Why Join Us must be defined.')
     if (agreement === false) return alert('Agreement must be accepted.')
 
     axios.post(`${api}/accounts`, {
-      email,
-      username,
-      password,
+      resumeLink,
+      whyJoinUs,
       subscribe,
       agreement
     })
       .then(function (response) {
         console.log(response)
         if (response.data.agreement) {
-          login(username, password)
+          // login(username, password)
+          alert('Thank You!')
         } else {
           alert('invalid account')
         }
@@ -63,20 +63,12 @@
   <div class="card auth" style="margin-top: 0;">
     <div class="row">
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate" bind:value={email}>
-        <label for="email">Email</label>
+        <input id="resumeLink" type="text" class="validate" bind:value={resumeLink}>
+        <label for="resumeLink">Resume URL</label>
       </div>
       <div class="input-field col s12">
-        <input id="username" type="text" class="validate" bind:value={username}>
-        <label for="username">Username</label>
-      </div>
-      <div class="input-field col s12">
-        <input id="password" type="password" class="validate" bind:value={password}>
-        <label for="password">Password</label>
-      </div>
-      <div class="input-field col s12">
-        <input id="passwordRepeat" type="password" class="validate" bind:value={passwordRepeat}>
-        <label for="passwordRepeat">Password Confirm</label>
+        <textarea id="why" type="text" class="materialize-textarea" bind:value={whyJoinUs}></textarea>
+        <label for="why">Why Join Us?</label>
       </div>
       <div class="input-field col s12">
         <p>
