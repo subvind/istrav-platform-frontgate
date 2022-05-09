@@ -7,8 +7,8 @@
   }
 
   onMount(() => {
-    let lsToken = localStorage.getItem('token') || ''
-    if (lsToken !== '') {
+    let lsToken = localStorage.getItem('token')
+    if (lsToken) {
       token = parseJwt(lsToken)
     }
 
@@ -17,7 +17,7 @@
     } else if (token.masterId) {
       window.location.href = '/webmaster/dashboard'
     } else {
-      window.location.href = '/webmaster/register'
+      window.location.href = '/webmaster/login'
     }
   })
 </script>

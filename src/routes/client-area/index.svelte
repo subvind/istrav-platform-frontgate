@@ -3,7 +3,7 @@
   import { parseJwt } from '../../parseJwt'
 
   let token = {
-    ownerId: ''
+    clientId: ''
   }
 
   onMount(() => {
@@ -12,12 +12,12 @@
       token = parseJwt(lsToken)
     }
 
-    if (token.ownerId === '') {
+    if (token.clientId === '') {
       window.location.href = '/client-area/login'
-    } else if (token.ownerId) {
+    } else if (token.clientId) {
       window.location.href = '/client-area/dashboard'
     } else {
-      window.location.href = '/client-area/register'
+      window.location.href = '/client-area/login'
     }
   })
 </script>

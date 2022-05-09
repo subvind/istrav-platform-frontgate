@@ -1,7 +1,24 @@
 <script>
+  import { onMount } from "svelte";
+  
+  import { parseJwt } from "../../parseJwt";
+
   import Register from "../../components/auth/Register.svelte";
-  import MainTitle from '../../components/MainTitle.svelte';
   import NavigationAuth from "../../components/NavigationAuth.svelte";
+
+  let token = {
+    id: ''
+  }
+
+  onMount(() => {
+    let lsToken = localStorage.getItem('token')
+    if (lsToken) {
+      token = parseJwt(lsToken)
+      if (token.id) {
+        window.location.href = `/accounts/${token.id}`
+      }
+    }
+  })
 </script>
 
 <svelte:head>
@@ -11,7 +28,6 @@
 </svelte:head>
 
 <NavigationAuth />
-
 
 <div class="container">
   <br />
