@@ -11,23 +11,23 @@
 		api = value
 	})
 
-	let username = '';
+	let email = '';
   let password = '';
 
   async function login() {
-    if (username === '') return alert('Username must be defined.')
+    if (email === '') return alert('Emai must be defined.')
     if (password === '') return alert('Password must be defined.')
 
     axios.post(`${api}/accounts/auth`, {
-      username,
+      email,
       password
     })
       .then(function (response) {
         console.log(response)
-        if (response.data) {
-          localStorage.setItem('token', response.data)
-          let token = parseJwt(response.data)
-          window.location.href = `/auth/profile`
+        let token = response.data.jwt
+        if (token) {
+          localStorage.setItem('token', JSON.stringify(token))
+          window.location.href = `/account`
         } else {
           alert('unable to fetch auth token')
         }
@@ -44,8 +44,8 @@
     <h3 class="title">Login</h3>
     <div class="row">
       <div class="input-field col s12">
-        <input id="email" type="text" class="validate" bind:value={username}>
-        <label for="email">Username</label>
+        <input id="email" type="text" class="validate" bind:value={email}>
+        <label for="email">Email</label>
       </div>
       <div class="input-field col s12">
         <input id="password" type="password" class="validate" bind:value={password}>

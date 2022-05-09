@@ -11,18 +11,23 @@
 		api = value
 	})
 
+  let token = {
+    email: ''
+  }
+  let email = ''
 	let username = '';
   let password = '';
   let websiteId = 'for-example.com';
 
   async function login() {
+    if (email === '') return alert('Email must be defined.')
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
     if (websiteId === '') return alert('Website ID must be defined.')
 
-    axios.post(`${api}/accounts/auth`, {
-      type: 'admin-control-panel',
-      websiteId,
+    axios.post(`${api}/clients/auth`, {
+      domainName: websiteId,
+      email,
       username,
       password
     })
@@ -31,7 +36,7 @@
         if (response.data) {
           localStorage.setItem('token', response.data)
           let token = parseJwt(response.data)
-          window.location.href = `/admin-control-panel/accounts/${token.accountId}`
+          window.location.href = `/admin-control-panel/clients/${token.client.id}`
         } else {
           alert('unable to fetch auth token')
         }
@@ -40,6 +45,12 @@
 
   onMount(() => {
     window.M.updateTextFields();
+
+    let store = localStorage.getItem('token')
+    if (store) {
+      token = parseJwt(store)
+      email = token.email
+    }
   })
 </script>
 

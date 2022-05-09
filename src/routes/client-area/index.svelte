@@ -7,8 +7,8 @@
   }
 
   onMount(() => {
-    let lsToken = localStorage.getItem('token') || ''
-    if (lsToken !== '') {
+    let lsToken = localStorage.getItem('token')
+    if (lsToken) {
       token = parseJwt(lsToken)
     }
 

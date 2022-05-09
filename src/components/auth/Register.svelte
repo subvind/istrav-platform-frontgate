@@ -14,21 +14,20 @@
 	let email = ''
   let password = ''
   let passwordRepeat = ''
-  let username = ''
   let subscribe = true
   let agreement = false
 
-  async function login(username, password) {
+  async function login(email, password) {
     axios.post(`${api}/accounts/auth`, {
-      username,
+      email,
       password
     })
       .then(function (response) {
         console.log(response)
-        if (response.data) {
-          localStorage.setItem('token', response.data)
-          let token = parseJwt(response.data)
-          window.location.href = `/auth/profile`
+        let token = response.data.jwt
+        if (token) {
+          localStorage.setItem('token', token)
+          window.location.href = `/account`
         } else {
           alert('unable to fetch auth token')
         }
@@ -37,13 +36,11 @@
 
 	async function auth() {
     if (email === '') return alert('Email must be defined.')
-    if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
     if (agreement === false) return alert('Agreement must be accepted.')
 
     axios.post(`${api}/accounts`, {
       email,
-      username,
       password,
       subscribe,
       agreement
@@ -51,7 +48,7 @@
       .then(function (response) {
         console.log(response)
         if (response.data.agreement) {
-          login(username, password)
+          login(email, password)
         } else {
           alert('invalid account')
         }
@@ -70,10 +67,6 @@
       <div class="input-field col s12">
         <input id="email" type="email" class="validate" bind:value={email}>
         <label for="email">Email</label>
-      </div>
-      <div class="input-field col s12">
-        <input id="username" type="text" class="validate" bind:value={username}>
-        <label for="username">Username</label>
       </div>
       <div class="input-field col s12">
         <input id="password" type="password" class="validate" bind:value={password}>
