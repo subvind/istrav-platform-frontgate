@@ -23,6 +23,10 @@
         <li class="tab"><a href="#test3">CLIENTS</a></li>
         <li class="tab"><a href="#test4">MASTERS</a></li>
       </ul>
+
+      <a href="/auth/logout" class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+        <i class="material-icons">logout</i>
+      </a>
     </div>
   </div>
 </nav>
