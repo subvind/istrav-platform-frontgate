@@ -26,7 +26,7 @@
         console.log(response)
         let token = response.data.jwt
         if (token) {
-          localStorage.setItem('token', JSON.stringify(token))
+          localStorage.setItem('token', token)
           let lsToken = parseJwt(localStorage.getItem('token'))
           window.location.href = `/accounts/${lsToken.id}`
         } else {

@@ -1,5 +1,12 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
+  import Users from "./lists/Users.svelte";
+  import Admins from "./lists/Admins.svelte";
+  import Clients from "./lists/Clients.svelte";
+  import Masters from "./lists/Masters.svelte";
+
+  export let account: any
+  export let availableSessions: any
 
   onMount(() => {
     let el = document.querySelectorAll('.tabs')
@@ -24,7 +31,7 @@
         <li class="tab"><a href="#test4">MASTERS</a></li>
       </ul>
 
-      <a href="/auth/logout" class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+      <a href="/auth/logout" class="btn-floating btn-large halfway-fab waves-effect waves-light black lighten-2">
         <i class="material-icons">logout</i>
       </a>
     </div>
@@ -37,10 +44,21 @@
   <li><a href="collapsible.html">JavaScript</a></li>
 </ul>
 
+<br />
+<br />
+<br />
 <div class="container">
-  <div id="test1" class="col s12">Test 1</div>
-  <div id="test2" class="col s12">Test 2</div>
-  <div id="test3" class="col s12">Test 3</div>
-  <div id="test4" class="col s12">Test 4</div>
+  <div id="test1" class="col s12">
+    <Users account={account} availableSessions={availableSessions} />
+  </div>
+  <div id="test2" class="col s12">
+    <Admins account={account} availableSessions={availableSessions} />
+  </div>
+  <div id="test3" class="col s12">
+    <Clients account={account} availableSessions={availableSessions} />
+  </div>
+  <div id="test4" class="col s12">
+    <Masters account={account} availableSessions={availableSessions} />
+  </div>
 
 </div>
