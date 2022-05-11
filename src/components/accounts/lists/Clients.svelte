@@ -34,7 +34,7 @@
                 <tr>
                   <td>{session.username}</td>
                   <td>{session.tenant.referenceId}</td>
-                  {#if session.id === account.clientId}
+                  {#if session.id === account.client.id}
                     <td><a href={`/client-area`} class="btn red lighten-2">Current</a></td>
                   {:else}
                     <td><a href={`/client-area/login?referenceId=${session.tenant.referenceId}&username=${session.username}`} class="btn grey">GOTO</a></td>

@@ -34,7 +34,7 @@
                 <tr>
                   <td>{session.username}</td>
                   <td>{session.website.domainName}</td>
-                  {#if session.id === account.userId}
+                  {#if session.id === account.user.id}
                     <td><a href={`//${session.website.domainName}`} class="btn red lighten-2">Current</a></td>
                   {:else}
                     <td><a href={`//${session.website.domainName}/auth/login?username=${session.username}`} class="btn grey">GOTO</a></td>

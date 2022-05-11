@@ -1,20 +1,22 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   import { parseJwt } from '../../parseJwt'
 
-  let token = {
-    adminId: ''
+  let session = {
+    admin: {
+      id: ''
+    }
   }
 
   onMount(() => {
-    let lsToken = localStorage.getItem('token')
-    if (lsToken) {
-      token = parseJwt(lsToken)
+    let token = localStorage.getItem('token')
+    if (token) {
+      session = parseJwt(token)
     }
 
-    if (token.adminId === '') {
+    if (session.admin.id === '') {
       window.location.href = '/admin-control-panel/login'
-    } else if (token.adminId) {
+    } else if (session.admin.id) {
       window.location.href = '/admin-control-panel/dashboard'
     } else {
       window.location.href = '/admin-control-panel/login'

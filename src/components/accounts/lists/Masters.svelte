@@ -33,7 +33,7 @@ import { onMount } from "svelte";
               {#each availableSessions.masters as session}
                 <tr>
                   <td>{session.username}</td>
-                  {#if session.id === account.masterId}
+                  {#if session.id === account.master.id}
                     <td><a href={`/webmaster`} class="btn red lighten-2">Current</a></td>
                   {:else}
                     <td><a href={`/webmaster/login?username=${session.username}`} class="btn grey">GOTO</a></td>

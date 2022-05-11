@@ -1,20 +1,22 @@
 <script>
   import { onMount } from "svelte";
   import { parseJwt } from '../../parseJwt'
-
-  let token = {
-    masterId: ''
+  
+  let session = {
+    master: {
+      id: ''
+    }
   }
 
   onMount(() => {
-    let lsToken = localStorage.getItem('token')
-    if (lsToken) {
-      token = parseJwt(lsToken)
+    let token = localStorage.getItem('token')
+    if (token) {
+      session = parseJwt(token)
     }
 
-    if (token.masterId === '') {
+    if (session.master.id === '') {
       window.location.href = '/webmaster/login'
-    } else if (token.masterId) {
+    } else if (session.master.id) {
       window.location.href = '/webmaster/dashboard'
     } else {
       window.location.href = '/webmaster/login'
