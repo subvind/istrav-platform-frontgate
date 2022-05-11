@@ -80,6 +80,12 @@ $ git tag v0.0.14
 $ git push --tags
 ```
 
+### clear port
+```bash
+$ lsof -i tcp:3000
+$ kill -9 PID
+```
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).

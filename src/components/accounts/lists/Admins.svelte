@@ -1,6 +1,5 @@
 <script lang="ts">
-  import WebmasterReplied from "src/routes/client-area/support/webmaster-replied.svelte";
-import { onMount } from "svelte";
+  import { onMount } from "svelte";
   
   export let account: any
   export let availableSessions: any
