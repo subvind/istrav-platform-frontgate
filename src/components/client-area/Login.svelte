@@ -1,5 +1,4 @@
-
-<script>
+<script lang='ts'>
   import { onMount } from 'svelte';
 
   import axios from 'axios'
@@ -11,29 +10,38 @@
 		api = value
 	})
 
-	let username = '';
+  export let session = {
+    email: ''
+  }
+	export let username = '';
   let password = '';
-  let tenantId = 'my-example';
+  export let referenceId = 'my-example';
 
   async function login() {
+    if (session.email === '') return alert('Email must be defined. Please register or login to a root account in order to get this.')
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
-    if (tenantId === '') return alert('Tenant ID must be defined.')
+    if (referenceId === '') return alert('Tenant Reference ID must be defined.')
 
-    axios.post(`${api}/accounts/auth`, {
-      type: 'client-area',
-      tenantId,
+    axios.post(`${api}/clients/auth`, {
+      email: session.email,
+      referenceId,
       username,
       password,
     })
       .then(function (response) {
         console.log(response)
-        if (response.data) {
-          localStorage.setItem('token', response.data)
-          let token = parseJwt(response.data)
-          window.location.href = `/client-area/accounts/${token.userId}`
+        if (response.data.jwt.error) {
+          alert(response.data.jwt.error)
         } else {
-          alert('unable to fetch auth token')
+          let token = response.data.jwt
+          if (token) {
+            localStorage.setItem('token', token)
+            let account = parseJwt(localStorage.getItem('token'))
+            window.location.href = `/client-area/clients/${account.client.id}`
+          } else {
+            alert('unable to fetch auth token')
+          }
         }
       })
   }
@@ -50,8 +58,8 @@
         <p>The contents behind this folder are secured behind cryptography because of it's sensitive nature it is kept behind a lock and key. Only users that have registered below are allowed access here.</p>
       </div>
       <div class="input-field col s12">
-        <input id="tenantId" type="text" class="validate" bind:value={tenantId}>
-        <label for="tenantId">Tenant ID</label>
+        <input id="referenceId" type="text" class="validate" bind:value={referenceId}>
+        <label for="referenceId">Tenant Reference ID</label>
       </div>
       <div class="input-field col s12">
         <input id="email" type="text" class="validate" bind:value={username}>

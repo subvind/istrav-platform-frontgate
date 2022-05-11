@@ -2,6 +2,20 @@
   import Login from "../../components/webmaster/Login.svelte";
   import MainTitle from '../../components/MainTitle.svelte';
   import NavigationAuth from "../../components/NavigationAuth.svelte";
+
+  import { onMount } from "svelte";
+  import { parseJwt } from '../../parseJwt'
+
+  let session = {
+    masterId: ''
+  }
+
+  onMount(() => {
+    let token = localStorage.getItem('token')
+    if (token) {
+      session = parseJwt(token)
+    }
+  })
 </script>
 
 <svelte:head>
@@ -43,7 +57,7 @@
           </a>
         </div>
         <div class="single"></div>
-        <Login />
+        <Login session={session} />
         <br />
         <br />
         <br />

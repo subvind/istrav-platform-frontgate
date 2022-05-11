@@ -1,5 +1,5 @@
 
-<script>
+<script lang='ts'>
   import { onMount } from 'svelte';
 
   import axios from 'axios'
@@ -15,30 +15,38 @@
     email: ''
   }
   let email = ''
-	let username = '';
+  export let session = {
+    email: ''
+  }
+	export let username = '';
   let password = '';
-  let websiteId = 'for-example.com';
+  export let websiteId = 'for-example.com';
 
   async function login() {
-    if (email === '') return alert('Email must be defined.')
+    if (session.email === '') return alert('Email must be defined. Please register or login to a root account in order to get this.')
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
     if (websiteId === '') return alert('Website ID must be defined.')
 
-    axios.post(`${api}/clients/auth`, {
+    axios.post(`${api}/admins/auth`, {
       domainName: websiteId,
-      email,
+      email: session.email,
       username,
       password
     })
       .then(function (response) {
         console.log(response)
-        if (response.data) {
-          localStorage.setItem('token', response.data)
-          let token = parseJwt(response.data)
-          window.location.href = `/admin-control-panel/clients/${token.client.id}`
+        let token = response.data.jwt
+        if (response.data.jwt.error) {
+          alert(response.data.jwt.error)
         } else {
-          alert('unable to fetch auth token')
+          if (token) {
+            localStorage.setItem('token', token)
+            let account = parseJwt(localStorage.getItem('token'))
+            window.location.href = `/admin-control-panel/admins/${account.admin.id}`
+          } else {
+            alert('unable to fetch auth token')
+          }
         }
       })
   }

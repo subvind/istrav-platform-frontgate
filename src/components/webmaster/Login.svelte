@@ -11,25 +11,35 @@
 		api = value
 	})
 
+  export let session = {
+    email: ''
+  }
 	let username = '';
   let password = '';
 
   async function login() {
+    if (session.email === '') return alert('Email must be defined. Please register or login to a root account in order to get this.')
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
 
-    axios.post(`${api}/accounts/auth`, {
+    axios.post(`${api}/masters/auth`, {
+      email: session.email,
       username,
       password
     })
       .then(function (response) {
         console.log(response)
-        if (response.data) {
-          localStorage.setItem('token', response.data)
-          let token = parseJwt(response.data)
-          window.location.href = `/members/${token.userId}`
+        if (response.data.jwt.error) {
+          alert(response.data.jwt.error)
         } else {
-          alert('unable to fetch auth token')
+          let token = response.data.jwt
+          if (token) {
+            localStorage.setItem('token', token)
+            let account = parseJwt(localStorage.getItem('token'))
+            window.location.href = `/webmaster/masters/${account.master.id}`
+          } else {
+            alert('unable to fetch auth token')
+          }
         }
       })
   }

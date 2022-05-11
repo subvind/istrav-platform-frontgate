@@ -25,12 +25,16 @@
       .then(function (response) {
         console.log(response)
         let token = response.data.jwt
-        if (token) {
-          localStorage.setItem('token', token)
-          let lsToken = parseJwt(localStorage.getItem('token'))
-          window.location.href = `/accounts/${lsToken.id}`
+        if (response.data.jwt.error) {
+          alert(response.data.jwt.error)
         } else {
-          alert('unable to fetch auth token')
+          if (token) {
+            localStorage.setItem('token', token)
+            let lsToken = parseJwt(localStorage.getItem('token'))
+            window.location.href = `/accounts/${lsToken.id}`
+          } else {
+            alert('unable to fetch auth token')
+          }
         }
       })
   }

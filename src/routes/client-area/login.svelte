@@ -1,7 +1,32 @@
+<script context="module">
+  export async function load(ctx) {
+    let username = ctx.url.searchParams.get('username')
+    let referenceId = ctx.url.searchParams.get('referenceId')
+    return { props: { username, referenceId }}
+  }
+</script>
+
 <script>
   import Login from "../../components/client-area/Login.svelte";
   import MainTitle from '../../components/MainTitle.svelte';
   import NavigationAuth from "../../components/NavigationAuth.svelte";
+
+  export let username = ''
+  export let referenceId = ''
+  
+  import { onMount } from "svelte";
+  import { parseJwt } from '../../parseJwt'
+
+  let session = {
+    clientId: ''
+  }
+
+  onMount(() => {
+    let token = localStorage.getItem('token')
+    if (token) {
+      session = parseJwt(token)
+    }
+  })
 </script>
 
 <svelte:head>
@@ -43,7 +68,7 @@
           </a>
         </div>
         <div class="single"></div>
-        <Login />
+        <Login session={session} username={username} referenceId={referenceId} />
         <br />
         <br />
         <br />
