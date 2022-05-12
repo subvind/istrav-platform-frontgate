@@ -8,7 +8,7 @@
 </script>
 
 <div class="row dashboard">
-  <div class="col m1" style="background: #000; text-align: center;">
+  <div class="col m1" style="background: #111; text-align: center;">
     <nav class="green lighten-2">
       <div class="nav-wrapper">
         <a href="/" class="brand-logo center"><i class="material-icons">folder_open</i></a>

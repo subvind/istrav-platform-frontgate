@@ -51,7 +51,7 @@
 	}
 
 	.sidenav li a:hover {
-		background-color: #000;
+		background-color: #111;
 	}
 
 	.sidenav li a.active {
