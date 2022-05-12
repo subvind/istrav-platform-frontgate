@@ -7,7 +7,7 @@
 
 <script lang="ts">
   import Dashboard from '../../../components/layout/Dashboard.svelte'
-  import Navigation from '../../../components/accounts/Navigation.svelte'
+  import Navigation from '../../../components/accounts/AvailableSessions.svelte'
 
   import { onMount } from "svelte";
   
