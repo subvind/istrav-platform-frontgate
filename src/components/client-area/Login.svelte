@@ -15,17 +15,17 @@
   }
 	export let username = '';
   let password = '';
-  export let referenceId = 'my-example';
+  export let tenantReferenceId = 'my-example';
 
   async function login() {
     if (session.email === '') return alert('Email must be defined. Please register or login to a root account in order to get this.')
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
-    if (referenceId === '') return alert('Tenant Reference ID must be defined.')
+    if (tenantReferenceId === '') return alert('Tenant Reference ID must be defined.')
 
     axios.post(`${api}/clients/auth`, {
       email: session.email,
-      referenceId,
+      tenantReferenceId,
       username,
       password,
     })
@@ -58,8 +58,8 @@
         <p>The contents behind this folder are secured behind cryptography because of it's sensitive nature it is kept behind a lock and key. Only users that have registered below are allowed access here.</p>
       </div>
       <div class="input-field col s12">
-        <input id="referenceId" type="text" class="validate" bind:value={referenceId}>
-        <label for="referenceId">Tenant Reference ID</label>
+        <input id="tenantReferenceId" type="text" class="validate" bind:value={tenantReferenceId}>
+        <label for="tenantReferenceId">Tenant Reference ID</label>
       </div>
       <div class="input-field col s12">
         <input id="email" type="text" class="validate" bind:value={username}>
