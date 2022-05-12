@@ -56,6 +56,7 @@
 
 	.sidenav li a.active {
 		background-color: #64B5F6 !important;
+    border-radius: 2em;
 	}
 
 	.sidenav .divider {
