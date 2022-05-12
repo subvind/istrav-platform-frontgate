@@ -14,9 +14,9 @@
       session = parseJwt(token)
     }
 
-    if (session.master.id === '') {
+    if (session.master && session.master.id === '') {
       window.location.href = '/webmaster/login'
-    } else if (session.master.id) {
+    } else if (session.master && session.master.id) {
       window.location.href = '/webmaster/dashboard'
     } else {
       window.location.href = '/webmaster/login'

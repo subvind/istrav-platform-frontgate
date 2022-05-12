@@ -14,9 +14,9 @@
       session = parseJwt(token)
     }
 
-    if (session.client.id === '') {
+    if (session.client && session.client.id === '') {
       window.location.href = '/client-area/login'
-    } else if (session.client.id) {
+    } else if (session.client && session.client.id) {
       window.location.href = '/client-area/dashboard'
     } else {
       window.location.href = '/client-area/login'

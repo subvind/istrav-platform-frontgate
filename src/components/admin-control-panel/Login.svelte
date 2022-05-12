@@ -20,16 +20,16 @@
   }
 	export let username = '';
   let password = '';
-  export let websiteId = 'for-example.com';
+  export let domainName = 'for-example.com';
 
   async function login() {
     if (session.email === '') return alert('Email must be defined. Please register or login to a root account in order to get this.')
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
-    if (websiteId === '') return alert('Website ID must be defined.')
+    if (domainName === '') return alert('Website ID must be defined.')
 
     axios.post(`${api}/admins/auth`, {
-      domainName: websiteId,
+      domainName: domainName,
       email: session.email,
       username,
       password
@@ -69,8 +69,8 @@
         <p>The contents behind this folder are secured behind cryptography because of it's sensitive nature it is kept behind a lock and key. Only users that have been given permission through the Client Area are allowed access here.</p>
       </div>
       <div class="input-field col s12">
-        <input id="websiteId" type="text" class="validate" bind:value={websiteId}>
-        <label for="websiteId">Website ID</label>
+        <input id="domainName" type="text" class="validate" bind:value={domainName}>
+        <label for="domainName">Domain Name</label>
       </div>
       <div class="input-field col s12">
         <input id="email" type="text" class="validate" bind:value={username}>
