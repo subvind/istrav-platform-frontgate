@@ -7,6 +7,7 @@
   import { parseJwt } from '../../parseJwt'
 
   let session = {
+    email: '',
     masterId: ''
   }
 

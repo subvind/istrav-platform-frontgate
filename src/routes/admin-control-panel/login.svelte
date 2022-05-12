@@ -1,8 +1,8 @@
 <script context="module">
   export async function load(ctx) {
     let username = ctx.url.searchParams.get('username')
-    let referenceId = ctx.url.searchParams.get('referenceId')
-    return { props: { username, referenceId }}
+    let domainName = ctx.url.searchParams.get('domainName')
+    return { props: { username, domainName }}
   }
 </script>
 
@@ -12,12 +12,13 @@
   import NavigationAuth from "../../components/NavigationAuth.svelte";
   
   export let username = ''
-  export let referenceId = ''
+  export let domainName = ''
 
   import { onMount } from "svelte";
   import { parseJwt } from '../../parseJwt'
 
   let session = {
+    email: '',
     adminId: ''
   }
 
@@ -68,7 +69,7 @@
           </a>
         </div>
         <div class="single"></div>
-        <Login session={session} username={username} referenceId={referenceId} />
+        <Login session={session} username={username} domainName={domainName} />
         <br />
         <br />
         <br />
