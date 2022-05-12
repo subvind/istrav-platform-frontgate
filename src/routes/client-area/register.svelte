@@ -2,6 +2,21 @@
   import Register from "../../components/client-area/Register.svelte";
   import MainTitle from '../../components/MainTitle.svelte';
   import NavigationAuth from "../../components/NavigationAuth.svelte";
+
+  import { onMount } from "svelte";
+  import { parseJwt } from '../../parseJwt'
+
+  let session = {
+    email: '',
+    clientId: ''
+  }
+
+  onMount(() => {
+    let token = localStorage.getItem('token')
+    if (token) {
+      session = parseJwt(token)
+    }
+  })
 </script>
 
 <svelte:head>
@@ -43,7 +58,7 @@
           </a>
         </div>
         <div class="single"></div>
-        <Register />
+        <Register session={session} />
         <br />
         <br />
         <br />

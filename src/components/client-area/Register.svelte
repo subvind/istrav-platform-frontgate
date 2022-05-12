@@ -11,18 +11,16 @@
 		api = value
 	})
 
-	let email = ''
+  export let session = {
+    email: ''
+  }
   let password = ''
-  let passwordRepeat = ''
   let username = ''
-  let subscribe = true
-  let agreement = false
-  let tenantId = 'my-example'
+  let tenantReferenceId = 'my-example'
 
-  async function login(username, password, tenantId) {
-    axios.post(`${api}/accounts/auth`, {
-      type: 'client-area',
-      tenantId,
+  async function login(username, password, tenantReferenceId) {
+    axios.post(`${api}/clients/auth`, {
+      tenantReferenceId,
       username,
       password
     })
@@ -39,23 +37,21 @@
   }
 
 	async function auth() {
-    if (email === '') return alert('Email must be defined.')
+    if (session.email === '') return alert('Email must be defined. Please register or login to a root account in order to get this.')
     if (username === '') return alert('Username must be defined.')
     if (password === '') return alert('Password must be defined.')
-    if (agreement === false) return alert('Agreement must be accepted.')
-    if (tenantId === '') return alert('Tenant ID must be defined.')
+    if (tenantReferenceId === '') return alert('Tenant Reference ID must be defined.')
 
-    axios.post(`${api}/accounts`, {
-      email,
+    axios.post(`${api}/clients`, {
+      email: session.email,
+      tenantReferenceId,
       username,
-      password,
-      subscribe,
-      agreement
+      password
     })
       .then(function (response) {
         console.log(response)
         if (response.data.agreement) {
-          login(username, password, tenantId)
+          login(username, password, tenantReferenceId)
         } else {
           alert('invalid account')
         }
@@ -75,8 +71,8 @@
         <p>To begin, create a Client Area record by signing up here. Then we'll help get your website online and domain names hooked up to internet servers.</p>
       </div>
       <div class="input-field col s12">
-        <input id="tenantId" type="text" class="validate" bind:value={tenantId}>
-        <label for="tenantId">Tenant ID</label>
+        <input id="tenantReferenceId" type="text" class="validate" bind:value={tenantReferenceId}>
+        <label for="tenantReferenceId">Tenant Reference ID</label>
         <p>This ID will be a key to your tenant record within /community_folder/ and must be unique communityfolder.com wide.</p>
       </div>
       <div class="input-field col s12">
