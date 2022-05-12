@@ -37,6 +37,7 @@
 <style>
 	.sidenav {
     box-shadow: none;
+    width: 100%;
 		height: auto;
 		transform: none !important;
 		position: relative;
