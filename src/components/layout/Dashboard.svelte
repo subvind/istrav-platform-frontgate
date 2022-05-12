@@ -17,7 +17,7 @@
     <br />
     <MainNavigation app={app} />
   </div>
-  <div class="col m3" style="background: #111;">
+  <div class="col m3" style="background: #222;">
     <nav class="black lighten-2">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo center">/community_folder/</a>
@@ -54,6 +54,5 @@
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-
   }
 </style>
