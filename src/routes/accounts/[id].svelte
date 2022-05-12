@@ -4,8 +4,9 @@
     return { props: { id }}
   }
 </script>
-  
+
 <script lang="ts">
+  import Dashboard from '../../components/layout/Dashboard.svelte'
   import Navigation from '../../components/accounts/Navigation.svelte'
 
   import { onMount } from "svelte";
@@ -44,6 +45,8 @@
   })
 </script>
 
-{#if data}
-  <Navigation account={account} availableSessions={data} />
-{/if}
+<Dashboard app="my-account" active="available-sessions">
+  {#if data}
+    <Navigation account={account} availableSessions={data} />
+  {/if}
+</Dashboard>

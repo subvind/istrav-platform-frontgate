@@ -13,7 +13,7 @@ import { onMount } from "svelte";
   })
 </script>
 
-<div class="col s12 m7">
+<div class="col s12">
   <a class="btn right green lighten-2" href="/webmaster/login">Welcome</a>
   <h4 class="header">Available Sessions:</h4>
   <h6>This is a list of available sessions for root privileges.</h6>
@@ -33,7 +33,7 @@ import { onMount } from "svelte";
               {#each availableSessions.masters as session}
                 <tr>
                   <td>{session.username}</td>
-                  {#if session.id === account.master.id}
+                  {#if account.master && session.id === account.master.id}
                     <td><a href={`/webmaster`} class="btn red lighten-2">Current</a></td>
                   {:else}
                     <td><a href={`/webmaster/login?username=${session.username}`} class="btn grey">GOTO</a></td>
@@ -51,6 +51,10 @@ import { onMount } from "svelte";
 </div>
 
 <style>
+  .header {
+    margin-top: 0;
+  }
+  
   .card-content {
     padding: 0;
   }

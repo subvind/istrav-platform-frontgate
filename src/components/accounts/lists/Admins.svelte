@@ -12,7 +12,7 @@
   })
 </script>
 
-<div class="col s12 m7">
+<div class="col s12">
   <a class="btn right green lighten-2" href="/admin-control-panel/login">Welcome</a>
   <h4 class="header">Available Sessions:</h4>
   <h6>This is a list of available sessions for websites that you are allowed control over.</h6>
@@ -34,7 +34,7 @@
                 <tr>
                   <td>{session.username}</td>
                   <td>{session.website.domainName}</td>
-                  {#if session.id === account.admin.id}
+                  {#if account.admin && session.id === account.admin.id}
                     <td><a href={`/admin-control-panel`} class="btn red lighten-2">Current</a></td>
                   {:else}
                     <td><a href={`/admin-control-panel/login?domainName=${session.website.domainName}&username=${session.username}`} class="btn grey">GOTO</a></td>
@@ -52,6 +52,10 @@
 </div>
 
 <style>
+  .header {
+    margin-top: 0;
+  }
+  
   .card-content {
     padding: 0;
   }

@@ -12,7 +12,7 @@
   })
 </script>
 
-<div class="col s12 m7">
+<div class="col s12">
   <a class="btn right green lighten-2" href="/client-area/login">Welcome</a>
   <h4 class="header">Available Sessions:</h4>
   <h6>This is a list of available sessions for tenants that you have permission to.</h6>
@@ -34,7 +34,7 @@
                 <tr>
                   <td>{session.username}</td>
                   <td>{session.tenant.referenceId}</td>
-                  {#if session.id === account.client.id}
+                  {#if account.client && session.id === account.client.id}
                     <td><a href={`/client-area`} class="btn red lighten-2">Current</a></td>
                   {:else}
                     <td><a href={`/client-area/login?referenceId=${session.tenant.referenceId}&username=${session.username}`} class="btn grey">GOTO</a></td>
@@ -52,6 +52,10 @@
 </div>
 
 <style>
+  .header {
+    margin-top: 0;
+  }
+
   .card-content {
     padding: 0;
   }

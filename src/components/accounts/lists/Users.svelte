@@ -12,7 +12,7 @@
   })
 </script>
 
-<div class="col s12 m7">
+<div class="col s12">
   <!-- <a class="btn right green lighten-2" href="/webmaster/login">Welcome</a> -->
   <h4 class="header">Available Sessions:</h4>
   <h6>This is a list of available sessions for websites that you are allowed access to.</h6>
@@ -34,7 +34,7 @@
                 <tr>
                   <td>{session.username}</td>
                   <td>{session.website.domainName}</td>
-                  {#if session.id === account.user.id}
+                  {#if account.user && session.id === account.user.id}
                     <td><a href={`//${session.website.domainName}`} class="btn red lighten-2">Current</a></td>
                   {:else}
                     <td><a href={`//${session.website.domainName}/auth/login?username=${session.username}`} class="btn grey">GOTO</a></td>
@@ -52,6 +52,10 @@
 </div>
 
 <style>
+  .header {
+    margin-top: 0;
+  }
+  
   .card-content {
     padding: 0;
   }
