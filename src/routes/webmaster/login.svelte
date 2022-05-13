@@ -1,3 +1,10 @@
+<script context="module">
+  export async function load(ctx) {
+    let username = ctx.url.searchParams.get('username')
+    return { props: { username }}
+  }
+</script>
+
 <script>
   import Login from "../../components/webmaster/Login.svelte";
   import MainTitle from '../../components/MainTitle.svelte';
@@ -6,6 +13,7 @@
   import { onMount } from "svelte";
   import { parseJwt } from '../../parseJwt'
 
+  export let username = '';
   let session = {
     email: '',
     masterId: ''
@@ -58,7 +66,7 @@
           </a>
         </div>
         <div class="single"></div>
-        <Login session={session} />
+        <Login session={session} username={username}/>
         <br />
         <br />
         <br />

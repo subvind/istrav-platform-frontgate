@@ -14,7 +14,7 @@
   export let session = {
     email: ''
   }
-	let username = '';
+	export let username = '';
   let password = '';
 
   async function login() {
@@ -43,6 +43,10 @@
         }
       })
   }
+
+  onMount(() => {
+    window.M.updateTextFields();
+  })
 </script>
 
 <div class="contain">
