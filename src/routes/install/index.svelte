@@ -52,7 +52,9 @@
 <div id="modal1" class="modal">
   <div class="modal-content">
     <h4>Step #1/3</h4>
-    <h5>Create a root account with your email address.</h5>
+    <h5>Create a root account with your email address and then log in to it.</h5>
+    <h5><a href={`/auth/register`} target="_blank">https://{domainName}/auth/register</a></h5>
+    <h5><a href={`/auth/login`} target="_blank">https://{domainName}/auth/login</a></h5>
   </div>
   <div class="modal-footer">
     <a href="#!" class="waves-effect waves-green btn-flat" on:click={() => reset()}>Cancel</a>
