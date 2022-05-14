@@ -2,7 +2,7 @@
   <br />
   <br />
   <br />
-  <h1 class="title">/community_folder/</h1>
+  <h1 class="title">Launch Today</h1>
   <h2 class="description">A simple community platform<br /> for the modern web.</h2>
   <br />
   <br />
