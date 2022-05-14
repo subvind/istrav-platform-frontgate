@@ -5,6 +5,10 @@
   <h1 class="title">Launch Today</h1>
   <h2 class="description">A simple community platform<br /> for the modern web.</h2>
   <br />
+  <div style="text-align: center;">
+    <a href="/client-area" class="btn btn-large blue lighten-2">Let's go!</a>
+  </div>
+  <br />
   <br />
   <br />
   <div class="browser">

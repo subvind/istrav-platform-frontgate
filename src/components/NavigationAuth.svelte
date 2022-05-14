@@ -24,7 +24,7 @@
 <nav>
   <div class="nav-wrapper">
     <div class="container">
-      <a href="/" class="brand-logo"><i class="large material-icons">folder_open</i>Welcome</a>
+      <a href="/" class="brand-logo"><i class="large material-icons">lock</i>Welcome</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         {#if authenticated}
           <li><a href={`/accounts/${token.id}`}>{token.email}</a></li>
