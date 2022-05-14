@@ -24,7 +24,7 @@
   <div class="container">
     <div style="max-width: 500px; margin: 0 auto;">
       <h2 class="title">Social Groups</h2>
-      <h3 class="description">For every community oriented thing there is a file and for ever collection of files there is a folder; we call these kinds of things social groups and everyone of them has their own unique Bulletin Board located on the internet.</h3>
+      <h3 class="description">Where features are driven and oriented around micro communities.</h3>
     </div>
     <br />
     <br />
@@ -123,7 +123,7 @@
         </div>
       </div>
     </div>
-    <p class="detail">(notice: Unlike other social media platforms we are not here to take over and the world. We are simply here to provide community oriented Software as a Service (SaaS). That's why we gave ourselves a very specific searchable name "/community_folder/" rather than some abstract idea like "twitter" or "meta"; because we are in the business of code rather than people. That way communityfolder.com Client Area members may obtain a license key from us, fork our code, and with our permission start their own internet servers with their own rules running the same application yet with different branding.)</p>
+    <!-- <p class="detail">(notice: Unlike other social media platforms we are not here to take over and the world. We are simply here to provide community oriented Software as a Service (SaaS). That's why we gave ourselves a very specific searchable name "/community_folder/" rather than some abstract idea like "twitter" or "meta"; because we are in the business of code rather than people. That way communityfolder.com Client Area members may obtain a license key from us, fork our code, and with our permission start their own internet servers with their own rules running the same application yet with different branding.)</p> -->
   </div>
   <br />
   <br />

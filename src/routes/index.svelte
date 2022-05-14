@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-  <title>/community_folder/: Bulletin Board Software</title>
+  <title>/community_folder/: Bulletin Board System</title>
 </svelte:head>
 
 <Navigation />

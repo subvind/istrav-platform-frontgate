@@ -1,6 +1,6 @@
 <script>
-  export let title = '/community_folder/'
-  export let description = 'We are administrators and organizers that rely on Bulletin Boards to get the message out. This is our platform.'
+  export let title = 'Getting Started'
+  export let description = 'There is no better place then right here for starting your next community.'
 </script>
 
 

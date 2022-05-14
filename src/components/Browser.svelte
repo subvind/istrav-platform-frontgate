@@ -2,8 +2,8 @@
   <br />
   <br />
   <br />
-  <h1 class="title">Bulletin Board</h1>
-  <h2 class="description">The best software for connecting<br />social groups large and small.</h2>
+  <h1 class="title">/community_folder/</h1>
+  <h2 class="description">A simple community platform<br /> for the modern web.</h2>
   <br />
   <br />
   <br />
@@ -42,8 +42,8 @@
   <div class="container">
 
     <div style="max-width: 500px; margin: 0 auto;">
-      <h3 class="demo-title">Simple Design</h3>
-      <h3 class="demo-description">This application is packed full of controls and displays for running communities online behind browsers and mobile devices.</h3>
+      <h3 class="demo-title">Bulletin Board System</h3>
+      <h3 class="demo-description">Powered by a PostgreSQL database with a running NestJS backend, Svelte frontend, and NativeScript mobile app.</h3>
       <p class="demo-detail">(notice: /community_folder/demo/ resets every 1 hour.)</p>
     </div>
     <a class="waves-effect waves-light btn white black-text">home</a>

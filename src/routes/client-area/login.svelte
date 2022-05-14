@@ -43,7 +43,7 @@
   <br />
   <br />
   <br />
-  <MainTitle title="Client Area" description="Build, run, and manage websites with Multi-Tenant Community driven content powered by Social Groups." />
+  <MainTitle title="Client Area" description="A simple and secure zone for keeping track of tenant subscriptions and billing." />
   <div class="community">
     <div class="folder">
       <div class="navigation">

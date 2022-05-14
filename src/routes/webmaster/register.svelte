@@ -17,7 +17,7 @@
   <br />
   <br />
   <br />
-  <MainTitle title="Webmaster" description="A simple control panel for working with customers in the Client Area." />
+  <MainTitle title="Webmaster" description="A simple set of tools for working with customers in the Client Area." />
   <div class="community">
     <div class="folder">
       <div class="navigation">
