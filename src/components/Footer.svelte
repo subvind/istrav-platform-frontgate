@@ -11,11 +11,11 @@
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Software Plans</h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Free</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Small</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Medium</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Large</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Enterprise</a></li>
+          <li><a class="grey-text text-lighten-3" href="/client-area">Trial</a></li>
+          <li><a class="grey-text text-lighten-3" href="/client-area">Small</a></li>
+          <li><a class="grey-text text-lighten-3" href="/client-area">Medium</a></li>
+          <li><a class="grey-text text-lighten-3" href="/client-area">Large</a></li>
+          <li><a class="grey-text text-lighten-3" href="/client-area">Enterprise</a></li>
         </ul>
       </div>
     </div>
