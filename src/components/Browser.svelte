@@ -199,6 +199,7 @@
     border-bottom: 0;
     max-width: 900px;
     margin: 0 auto;
+    box-shadow: 0 0 1em #666;
   }
   
   /* Container for columns and the top "toolbar" */
