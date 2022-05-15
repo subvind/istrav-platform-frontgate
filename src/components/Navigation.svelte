@@ -37,8 +37,7 @@
               </li>
             </ul>
             <div class="right" style="margin: 0 1em;">
-              <a class="btn grey lighten-2 black-text" href="/admin-control-panel">ACP</a>
-              <a class="btn grey lighten-2 black-text" href="/client-area">Client Area</a>
+              <a class="btn grey lighten-2 black-text" href={`/create-social-group`}><i class="material-icons left" style="line-height: 37px;">add</i>SOCIAL GROUP</a>
             </div>
           <!-- {/if} -->
         </nav>
