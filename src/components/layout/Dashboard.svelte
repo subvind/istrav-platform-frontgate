@@ -25,7 +25,7 @@
     </nav>
     <Navigation app={app} active={active} />
   </div>
-  <div class="col m8">
+  <div class="col m8" style="background: #ddd; color: #333;">
     <Header app={app} />
     <slot></slot>
   </div>
