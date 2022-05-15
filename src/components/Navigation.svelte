@@ -10,7 +10,7 @@
   <div class="col m3" style="background: #222;">
     <nav class="black lighten-2">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">/community_folder/</a>
+        <a href="/" class="brand-logo center">/community_folder/</a>
       </div>
     </nav>
     <!-- <Navigation app={app} active={active} /> -->
@@ -19,21 +19,21 @@
     <div class="row header">
         <nav>
           <!-- {#if app === 'my-account'} -->
-            <ul class="">
+            <ul>
               <li>
-                <a href="/auth/logout">Solutions</a>
+                <a href="/marketing/solutions">Solutions</a>
               </li>
               <li>
-                <a href="/auth/logout">Product</a>
+                <a href="/marketing/product">Product</a>
               </li>
               <li>
-                <a href="/auth/logout">Pricing</a>
+                <a href="/marketing/pricing">Pricing</a>
               </li>
               <li>
-                <a href="/auth/logout">About</a>
+                <a href="/marketing/about">About</a>
               </li>
               <li>
-                <a href="/auth/logout">Community</a>
+                <a href="//www.communityfolder.com">Community</a>
               </li>
             </ul>
             <div class="right" style="margin: 0 1em;">
