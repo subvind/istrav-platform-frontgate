@@ -193,7 +193,7 @@
   }
 
   .marketing {
-    background: #4caf50;
+    background: #81C784;
     color: #111;
   }
 

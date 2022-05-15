@@ -21,7 +21,7 @@
     }
   })
 </script>
-<nav>
+<nav class="blue lighten-2">
   <div class="nav-wrapper">
     <div class="container">
       <a href="/" class="brand-logo"><i class="large material-icons">lock</i>Welcome</a>

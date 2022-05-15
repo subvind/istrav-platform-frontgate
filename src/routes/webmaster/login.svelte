@@ -8,6 +8,7 @@
 <script>
   import Login from "../../components/webmaster/Login.svelte";
   import MainTitle from '../../components/MainTitle.svelte';
+  import Navigation from '../../components/Navigation.svelte';
   import NavigationAuth from "../../components/NavigationAuth.svelte";
 
   import { onMount } from "svelte";
@@ -33,6 +34,7 @@
   <meta name="keywords" content="">
 </svelte:head>
 
+<Navigation />
 <NavigationAuth />
 
 <div class="container">

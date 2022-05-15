@@ -9,6 +9,7 @@
 <script>
   import Login from "../../components/admin-control-panel/Login.svelte";
   import MainTitle from '../../components/MainTitle.svelte';
+  import Navigation from '../../components/Navigation.svelte';
   import NavigationAuth from "../../components/NavigationAuth.svelte";
   
   export let username = ''
@@ -36,6 +37,7 @@
   <meta name="keywords" content="">
 </svelte:head>
 
+<Navigation />
 <NavigationAuth />
 
 <div class="container">

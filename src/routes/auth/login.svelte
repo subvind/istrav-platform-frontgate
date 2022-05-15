@@ -4,6 +4,7 @@
   import { parseJwt } from "../../parseJwt";
   
   import Login from "../../components/auth/Login.svelte";
+  import Navigation from '../../components/Navigation.svelte';
   import NavigationAuth from "../../components/NavigationAuth.svelte";
 
   let token = {
@@ -27,6 +28,7 @@
   <meta name="keywords" content="">
 </svelte:head>
 
+<Navigation />
 <NavigationAuth />
 
 <div class="container">
