@@ -60,6 +60,7 @@
     <li><a class="subheader">Webmaster</a></li>
     <li><a href="/webmaster/platform" class={active === 'platform' ? 'active' : ''}><i class="material-icons">folder</i>Platform</a></li>
     <li><a href="/webmaster/tenants" class={active === 'tenants' ? 'active' : ''}><i class="material-icons">business</i>Tenants</a></li>
+    <li><a href="/webmaster/pricing-plans" class={active === 'pricing-plans' ? 'active' : ''}><i class="material-icons">local_offer</i>Pricing Plans</a></li>
     <li><a href="/webmaster/license-keys" class={active === 'license-keys' ? 'active' : ''}><i class="material-icons">key</i>License Keys</a></li>
     <li><a href="/webmaster/payments" class={active === 'payments' ? 'active' : ''}><i class="material-icons">payment</i>Payments</a></li>
     <li><a href="/webmaster/masters" class={active === 'masters' ? 'active' : ''}><i class="material-icons">contacts</i>Masters</a></li>

@@ -18,6 +18,12 @@ containers:
 - https://hub.docker.com/r/istrav/communityfolder-backend
 - https://hub.docker.com/r/istrav/communityfolder-frontend
 
+third party services:
+- credit card: https://www.npmjs.com/package/nestjs-stripe
+- sms: https://www.npmjs.com/package/nestjs-twilio
+- email: https://www.npmjs.com/package/@ntegral/nestjs-sendgrid
+- cron: https://github.com/cloudflare/wrangler
+
 ### web-station
 ```bash
 # node.js
