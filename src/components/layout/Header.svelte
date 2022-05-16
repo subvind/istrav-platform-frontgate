@@ -22,6 +22,9 @@
     {#if app === 'client-area'}
       <Search />
     {/if}
+    {#if app === 'webmaster'}
+      <Search />
+    {/if}
     {#if app === 'my-account'}
       <Email />
     {/if}

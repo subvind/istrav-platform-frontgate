@@ -54,6 +54,25 @@
   </ul>
 {/if}
 
+{#if app === 'webmaster'}
+  <ul class="sidenav" style="display: visible;">
+    <li><a class="subheader">Main</a></li>
+    <li><a href="/webmaster/dashboard" class={active === 'dashboard' ? 'active' : ''}><i class="material-icons">dashboard</i>Dashboard</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Webmaster</a></li>
+    <li><a href="/webmaster/platform" class={active === 'platform' ? 'active' : ''}><i class="material-icons">folder</i>Platform</a></li>
+    <li><a href="/webmaster/tenants" class={active === 'tenants' ? 'active' : ''}><i class="material-icons">business</i>Tenants</a></li>
+    <li><a href="/webmaster/license-keys" class={active === 'license-keys' ? 'active' : ''}><i class="material-icons">key</i>License Keys</a></li>
+    <li><a href="/webmaster/payments" class={active === 'payments' ? 'active' : ''}><i class="material-icons">payment</i>Payments</a></li>
+    <li><a href="/webmaster/masters" class={active === 'masters' ? 'active' : ''}><i class="material-icons">contacts</i>Masters</a></li>
+    <li><a href="/webmaster/accounts" class={active === 'accounts' ? 'active' : ''}><i class="material-icons">folder_shared</i>Accounts</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Feedback</a></li>
+    <li><a href="/webmaster/help-desk" class={active === 'help-desk' ? 'active' : ''}><i class="material-icons">assignment_ind</i>Help Desk</a></li>
+    <li><div class="divider"></div></li>
+  </ul>
+{/if}
+
 <style>
 	.sidenav {
     box-shadow: none;
