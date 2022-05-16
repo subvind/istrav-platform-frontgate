@@ -18,7 +18,7 @@
   <a href={`/client-area/websites/create`} class="btn right black">CREATE</a>
   <h4>Websites:</h4>
   <div class="card">
-    {#if data && data.length}
+    {#if data && data.id}
       <table class="centered">
         <thead>
           <tr>
