@@ -23,11 +23,9 @@
     <li><div class="divider"></div></li>
     <li><a class="subheader">Admin Control Panel</a></li>
     <li><a href="/admin-control-panel/website" class={active === 'website' ? 'active' : ''}><i class="material-icons">public</i>Website</a></li>
-    <li><a href="/admin-control-panel/applications" class={active === 'applications' ? 'active' : ''}><i class="material-icons">apps</i>Applications</a></li>
     <li><a href="/admin-control-panel/social-groups" class={active === 'social-groups' ? 'active' : ''}><i class="material-icons">group</i>Social Groups</a></li>
     <li><a href="/admin-control-panel/admins" class={active === 'admins' ? 'active' : ''}><i class="material-icons">verified_user</i>Admins</a></li>
     <li><a href="/admin-control-panel/users" class={active === 'users' ? 'active' : ''}><i class="material-icons">person</i>Users</a></li>
-    <li><a href="/admin-control-panel/themes" class={active === 'themes' ? 'active' : ''}><i class="material-icons">color_lens</i>Themes</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Feedback</a></li>
     <li><a href="/admin-control-panel/help-desk" class={active === 'help-desk' ? 'active' : ''}><i class="material-icons">assignment_ind</i>Help Desk</a></li>
@@ -66,6 +64,8 @@
     <li><a href="/webmaster/payments" class={active === 'payments' ? 'active' : ''}><i class="material-icons">payment</i>Payments</a></li>
     <li><a href="/webmaster/masters" class={active === 'masters' ? 'active' : ''}><i class="material-icons">contacts</i>Masters</a></li>
     <li><a href="/webmaster/accounts" class={active === 'accounts' ? 'active' : ''}><i class="material-icons">folder_shared</i>Accounts</a></li>
+    <li><a href="/webmaster/applications" class={active === 'applications' ? 'active' : ''}><i class="material-icons">apps</i>Applications</a></li>
+    <li><a href="/webmaster/themes" class={active === 'themes' ? 'active' : ''}><i class="material-icons">color_lens</i>Themes</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Feedback</a></li>
     <li><a href="/webmaster/help-desk" class={active === 'help-desk' ? 'active' : ''}><i class="material-icons">assignment_ind</i>Help Desk</a></li>
