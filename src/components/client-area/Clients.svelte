@@ -9,11 +9,48 @@
     var instance = window['M'].Tabs.init(el, {});
   })
 </script>
-    
-{#if account}
-  hello world {account.email}
-{/if}
 
-{#if data}
+<!-- {#if data}
   {JSON.stringify(data)}
-{/if}
+{/if} -->
+
+<div class="wrapper">
+  <a href={`/client-area/clients/create`} class="btn right black">CREATE</a>
+  <h4>Clients:</h4>
+  <div class="card">
+    {#if data && data.length}
+      <table class="centered">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th style="text-align: right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {#each data as record}
+            <tr>
+              <td>{record.username}</td>
+              <td style="text-align: right;">
+                <a href={`/client-area/clients/update/${record.id}`} class="btn btn-small grey lighten-2 black-text">Update</a>
+                <a href={`/client-area/clients/delete/${record.id}`} class="btn btn-small grey lighten-2 black-text">Delete</a>
+              </td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    {:else}
+      <div class="card-content">
+        No records...
+      </div>
+    {/if}
+  </div>
+</div>
+
+<style>
+  h3 {
+    margin: 0;
+  }
+  .wrapper {
+    margin: 1em;
+  }
+</style>

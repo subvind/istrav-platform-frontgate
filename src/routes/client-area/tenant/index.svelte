@@ -1,6 +1,6 @@
 <script lang="ts">
   import Dashboard from '../../../components/layout/Dashboard.svelte'
-  import Websites from '../../../components/client-area/Websites.svelte'
+  import Tenant from '../../../components/client-area/Tenant.svelte'
 
   import { onMount } from "svelte";
   
@@ -18,7 +18,7 @@
 
   async function getList(token: any) {
     axios
-      .get(`${api}/tenants`,
+      .get(`${api}/tenants/${account.client.tenant.id}`,
       {
         headers: {
           ['Authorization']: `Bearer ${token}`
@@ -34,10 +34,11 @@
     let token = localStorage.getItem('token')
     account = parseJwt(token)
     
+    // console.log(account)
     getList(token)
   })
 </script>
 
 <Dashboard app="client-area" active="tenant">
-  <Websites account={account} data={data} />
+  <Tenant account={account} data={data} />
 </Dashboard>

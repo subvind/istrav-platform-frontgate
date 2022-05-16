@@ -1,6 +1,6 @@
 <script lang="ts">
   import Dashboard from '../../../components/layout/Dashboard.svelte'
-  import Index from '../../../components/client-area/Index.svelte'
+  import Clients from '../../../components/client-area/Clients.svelte'
 
   import { onMount } from "svelte";
   
@@ -39,5 +39,5 @@
 </script>
 
 <Dashboard app="client-area" active="clients">
-  <Index account={account} data={data} />
+  <Clients account={account} data={data} />
 </Dashboard>
