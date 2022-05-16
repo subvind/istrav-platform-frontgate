@@ -46,7 +46,7 @@
   <div class="container">
     <div style="max-width: 500px; margin: 0 auto;">
       <h3 class="demo-title">Bulletin Board System</h3>
-      <p class="demo-detail">(notice: /community_folder/demo/ resets every 1 hour.)</p>
+      <p class="demo-detail">(notice: /v/demo/ resets every 1 hour.)</p>
     </div>
     <a class="waves-effect waves-light btn white black-text">home</a>
     <a class="waves-effect waves-light btn grey">forums</a>
