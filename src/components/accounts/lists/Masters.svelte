@@ -14,7 +14,7 @@ import { onMount } from "svelte";
 </script>
 
 <div class="col s12">
-  <a class="btn right green lighten-2" href="/webmaster/login">Welcome</a>
+  <a class="btn right black" href="/webmaster/login">Welcome</a>
   <h4 class="header">Available Sessions:</h4>
   <h6>This is a list of available sessions for root privileges.</h6>
   <br />

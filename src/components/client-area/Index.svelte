@@ -15,7 +15,7 @@
 {/if} -->
 
 <div class="wrapper">
-  <a href={`/client-area/clients/create`} class="btn right black lighten-2">CREATE</a>
+  <a href={`/client-area/clients/create`} class="btn right black">CREATE</a>
   <h4>Clients</h4>
   <div class="card">
     <table class="centered">
