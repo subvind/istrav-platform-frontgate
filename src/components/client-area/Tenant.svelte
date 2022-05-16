@@ -33,7 +33,7 @@
 </div>
 
 <style>
-  h3 {
+  h4 {
     margin: 0;
   }
   .wrapper {
