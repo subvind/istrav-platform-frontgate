@@ -16,6 +16,9 @@
 
 <div class="row header">
   <div class="col m6">
+    {#if app === 'admin-control-panel'}
+      <Search />
+    {/if}
     {#if app === 'client-area'}
       <Search />
     {/if}

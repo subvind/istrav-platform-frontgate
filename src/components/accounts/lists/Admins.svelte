@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { session } from "$app/stores";
+import { onMount } from "svelte";
   
   export let account: any
   export let availableSessions: any
@@ -33,11 +34,16 @@
               {#each availableSessions.admins as session}
                 <tr>
                   <td>{session.username}</td>
-                  <td>{session.website.domainName}</td>
-                  {#if account.admin && session.id === account.admin.id}
-                    <td><a href={`/admin-control-panel`} class="btn red lighten-2">Current</a></td>
+                  {#if session.website}
+                    <td>{session.website.domainName}</td>
+                    {#if account.admin && session.id === account.admin.id}
+                      <td><a href={`/admin-control-panel`} class="btn red lighten-2">Current</a></td>
+                    {:else}
+                      <td><a href={`/admin-control-panel/login?domainName=${session.website.domainName}&username=${session.username}`} class="btn grey">GOTO</a></td>
+                    {/if}
                   {:else}
-                    <td><a href={`/admin-control-panel/login?domainName=${session.website.domainName}&username=${session.username}`} class="btn grey">GOTO</a></td>
+                    <td></td>
+                    <td></td>
                   {/if}
                 </tr>
               {/each}

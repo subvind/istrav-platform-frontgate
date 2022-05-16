@@ -16,6 +16,26 @@
   </ul>
 {/if}
     
+{#if app === 'admin-control-panel'}
+  <ul class="sidenav" style="display: visible;">
+    <li><a class="subheader">Main</a></li>
+    <li><a href="/admin-control-panel/dashboard" class={active === 'dashboard' ? 'active' : ''}><i class="material-icons">dashboard</i>Dashboard</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Admin Control Panel</a></li>
+    <li><a href="/admin-control-panel/website" class={active === 'website' ? 'active' : ''}><i class="material-icons">public</i>Website</a></li>
+    <li><a href="/admin-control-panel/applications" class={active === 'applications' ? 'active' : ''}><i class="material-icons">apps</i>Applications</a></li>
+    <li><a href="/admin-control-panel/social-groups" class={active === 'social-groups' ? 'active' : ''}><i class="material-icons">group</i>Social Groups</a></li>
+    <li><a href="/admin-control-panel/admins" class={active === 'admins' ? 'active' : ''}><i class="material-icons">verified_user</i>Admins</a></li>
+    <li><a href="/admin-control-panel/users" class={active === 'users' ? 'active' : ''}><i class="material-icons">person</i>Users</a></li>
+    <li><a href="/admin-control-panel/themes" class={active === 'themes' ? 'active' : ''}><i class="material-icons">color_lens</i>Themes</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Feedback</a></li>
+    <li><a href="/admin-control-panel/help-desk" class={active === 'help-desk' ? 'active' : ''}><i class="material-icons">assignment_ind</i>Help Desk</a></li>
+    <li><a href="/admin-control-panel/support" class={active === 'support' ? 'active' : ''}><i class="material-icons">assignment_turned_in</i>Support</a></li>
+    <li><div class="divider"></div></li>
+  </ul>
+{/if}
+
 {#if app === 'client-area'}
   <ul class="sidenav" style="display: visible;">
     <li><a class="subheader">Main</a></li>
@@ -24,7 +44,7 @@
     <li><a class="subheader">Client Area</a></li>
     <li><a href="/client-area/tenant" class={active === 'tenant' ? 'active' : ''}><i class="material-icons">business</i>Tenant</a></li>
     <li><a href="/client-area/websites" class={active === 'websites' ? 'active' : ''}><i class="material-icons">public</i>Websites</a></li>
-    <li><a href="/client-area/clients" class={active === 'clients' ? 'active' : ''}><i class="material-icons">person</i>Clients</a></li>
+    <li><a href="/client-area/clients" class={active === 'clients' ? 'active' : ''}><i class="material-icons">supervisor_account</i>Clients</a></li>
     <li><a href="/client-area/billing" class={active === 'billing' ? 'active' : ''}><i class="material-icons">attach_money</i>Billing</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Feedback</a></li>
