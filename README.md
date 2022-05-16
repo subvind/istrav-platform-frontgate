@@ -1,4 +1,4 @@
-/community_folder/ - Company
+communityfolder.com
 =======
 Allows customers to sign into a client area and create/pay/run/manage website(s) or "tenants" that are powered by communityfolder.
 
