@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
   
   export let account: any
-  export let data: any
 
   import axios from 'axios'
   import { parseJwt } from "../../../parseJwt";
@@ -42,7 +41,7 @@
       })
       .then(function (response) {
         console.log(response)
-        return data = response.data
+        return response.data
       })
   }
 
@@ -62,7 +61,7 @@
       })
       .then(function (response) {
         console.log(response)
-        return data = response.data
+        return response.data
       })
   }
 
@@ -79,7 +78,7 @@
       })
       .then(function (response) {
         console.log(response)
-        return data = response.data
+        return response.data
       })
   }
 
