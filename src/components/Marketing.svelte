@@ -4,8 +4,8 @@
   let community = 'communityfolder.com'
   let folder = 'example'
   let featured = {
-    name: 'www',
-    about: 'We DRIVE quality content by aligning our goal posts around social groups. Where users are the algorythm for deciding What goes on the World Wide Web\'s Bulletin Boards.'
+    name: 'istrav',
+    about: 'This is a Bulletin Board System for talking about application software development, building projects, deploying solutions to production, and integration with artificial inteligence.'
   }
   let isCreate = true
 
