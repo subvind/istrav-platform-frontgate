@@ -198,7 +198,7 @@
   }
 
   .marketing {
-    background-color: #aaa;
+    background-color: #ddd;
     color: #111;
     min-height: 100vh;
     box-shadow: inset 0 0.2em 0.2em #888;
