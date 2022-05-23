@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
 
   let community = 'communityfolder.com'
-  let folder = 'example'
+  let folder = 'istrav'
   let featured = {
     name: 'istrav',
     about: 'This is a Bulletin Board System for talking about application software development, building projects, deploying solutions to production, and integration with artificial inteligence.'
