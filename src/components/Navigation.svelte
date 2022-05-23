@@ -1,8 +1,12 @@
+<script>
+  let homepage = '//istrav.com'
+</script>
+
 <div class="row top">
   <div class="col m1" style="background: #111; text-align: center;">
     <nav class="green lighten-2">
       <div class="nav-wrapper">
-        <a href="/" class="brand-logo center"><i class="material-icons">folder</i></a>
+        <a href={homepage} class="brand-logo center"><i class="material-icons">folder</i></a>
       </div>
     </nav>
     <!-- <MainNavigation app={app} /> -->
