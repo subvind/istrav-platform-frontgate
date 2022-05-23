@@ -13,12 +13,12 @@
 
 <Navigation />
 
-<Browser />
+<NavigationAuth />
+<!-- <Browser /> -->
 
 <Marketing />
 
-<NavigationAuth />
-
+<!-- 
 <div class="container">
   <br />
   <div class="community">
@@ -76,7 +76,7 @@
   </div>
   <br />
   <br />
-</div>
+</div> -->
 
 <Footer />
 

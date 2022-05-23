@@ -21,10 +21,10 @@
     }
   })
 </script>
-<nav class="blue lighten-2">
+<nav class="members-only blue lighten-2">
   <div class="nav-wrapper">
     <div class="container">
-      <a href="/" class="brand-logo"><i class="large material-icons">lock</i>Welcome</a>
+      <a href="/" class="brand-logo"><i class="large material-icons">lock</i>Members Only</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         {#if authenticated}
           <li><a href={`/accounts/${token.id}`}>{token.email}</a></li>
@@ -37,3 +37,8 @@
   </div>
 </nav>
     
+<style>
+  .members-only {
+    /* box-shadow: 0 0 1em #333; */
+  }
+</style>

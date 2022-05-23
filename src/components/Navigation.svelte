@@ -21,19 +21,19 @@
           <!-- {#if app === 'my-account'} -->
             <ul>
               <li>
-                <a href="/marketing/solutions">Solutions</a>
+                <a href="//istrav.com/production">Production</a>
               </li>
               <li>
-                <a href="/marketing/product">Product</a>
+                <a href="//istrav.com/solutions">Solutions</a>
               </li>
               <li>
-                <a href="/marketing/pricing">Pricing</a>
+                <a href="//istrav.com/apps">Apps</a>
               </li>
               <li>
-                <a href="/marketing/about">About</a>
+                <a href="//istrav.com/platforms">Platforms</a>
               </li>
               <li>
-                <a href="//www.communityfolder.com">Community</a>
+                <a href="//istrav.com/projects">Projects</a>
               </li>
             </ul>
             <div class="right" style="margin: 0 1em;">
