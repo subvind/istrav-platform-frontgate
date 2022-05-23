@@ -26,7 +26,7 @@
     <span>
       <a href="https://communityfolder.com" class="copyright">/community_folder/</a> © {new Date().getFullYear()}. Made with <span>♥</span> by <a href="https://istrav.com" class="white-text">istrav.com</a>.
     </span>
-    <a class="grey-text text-lighten-4 right" href="/terms-of-service">Terms of Service</a>
+    <a class="grey-text text-lighten-4 right" href="/terms-and-conditions">Terms & Conditions</a>
     <span class="right" style="padding: 0 1em;"> • </span>
     <a class="grey-text text-lighten-4 right" href="/privacy-policy">Privacy Policy</a>
     </div>
