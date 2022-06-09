@@ -22,9 +22,9 @@
   <br />
   <br />
   <div class="container">
-    <div style="max-width: 500px; margin: 0 auto;">
-      <h2 class="title">Social Groups</h2>
-      <h3 class="description">Where social media is driven and oriented around micro communities.</h3>
+    <div style="max-width: 600px; margin: 0 auto;">
+      <h2 class="title">Networks</h2>
+      <h3 class="description">Where ideas are driven and oriented around multi-layered bulletin board systems.</h3>
     </div>
     <br />
     <br />
@@ -126,7 +126,6 @@
         </div>
       </div>
     </div>
-    <!-- <p class="detail">(notice: Unlike other social media platforms we are not here to take over and the world. We are simply here to provide community oriented Software as a Service (SaaS). That's why we gave ourselves a very specific searchable name "/community_folder/" rather than some abstract idea like "twitter" or "meta"; because we are in the business of code rather than people. That way communityfolder.com Client Area members may obtain a license key from us, fork our code, and with our permission start their own internet servers with their own rules running the same application yet with different branding.)</p> -->
   </div>
   <br />
   <br />
@@ -151,7 +150,6 @@
     margin: -2.85em 0 -1em 1em;
     position: absolute;
     color: #fff;
-
   }
   .folder {
     box-shadow: 0 0 5em #333;

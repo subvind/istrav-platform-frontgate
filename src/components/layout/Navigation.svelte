@@ -23,7 +23,7 @@
     <li><div class="divider"></div></li>
     <li><a class="subheader">Admin Control Panel</a></li>
     <li><a href="/admin-control-panel/website" class={active === 'website' ? 'active' : ''}><i class="material-icons">public</i>Website</a></li>
-    <li><a href="/admin-control-panel/social-groups" class={active === 'social-groups' ? 'active' : ''}><i class="material-icons">group</i>Social Groups</a></li>
+    <li><a href="/admin-control-panel/network" class={active === 'network' ? 'active' : ''}><i class="material-icons">group</i>Networks</a></li>
     <li><a href="/admin-control-panel/admins" class={active === 'admins' ? 'active' : ''}><i class="material-icons">verified_user</i>Admins</a></li>
     <li><a href="/admin-control-panel/users" class={active === 'users' ? 'active' : ''}><i class="material-icons">person</i>Users</a></li>
     <li><div class="divider"></div></li>

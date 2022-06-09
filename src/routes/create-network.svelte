@@ -5,7 +5,7 @@
   </script>
   
   <svelte:head>
-    <title>Create Social Group - /community_folder/</title>
+    <title>Create Network - /community_folder/</title>
   </svelte:head>
   
   <Navigation />
