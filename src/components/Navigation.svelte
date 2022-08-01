@@ -14,7 +14,7 @@
   <div class="col m3" style="background: #222;">
     <nav class="black lighten-2">
       <div class="nav-wrapper">
-        <a href="/" class="brand-logo center">/community_folder/</a>
+        <a href="/" class="brand-logo center">/istrav/</a>
       </div>
     </nav>
     <!-- <Navigation app={app} active={active} /> -->

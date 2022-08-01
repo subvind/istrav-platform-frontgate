@@ -37,7 +37,7 @@
 </script>
 
 <div class="install">
-  <h1 style="margin: 0;">/community_folder/</h1>
+  <h1 style="margin: 0;">/istrav/</h1>
   <h2 style="margin: 0;">(Installation)</h2>
   <br />
   <br />

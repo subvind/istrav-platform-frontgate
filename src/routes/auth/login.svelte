@@ -24,7 +24,7 @@
 </script>
 
 <svelte:head>
-  <title>Login: /community_folder/</title>
+  <title>Login: /istrav/</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 </svelte:head>
@@ -43,7 +43,7 @@
   <br />
   <div class="stamp">
     <a class="logo" href="/">
-      /community_folder/
+      /istrav/
     </a>
   </div>
   <div class="single"></div>

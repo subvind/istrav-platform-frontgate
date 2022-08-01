@@ -73,7 +73,7 @@
       <div class="input-field col s12">
         <input id="tenantReferenceId" type="text" class="validate" bind:value={tenantReferenceId}>
         <label for="tenantReferenceId">Tenant Reference ID</label>
-        <p>This ID will be a key to your tenant record within /community_folder/ and must be unique communityfolder.com wide.</p>
+        <p>This ID will be a key to your tenant record within /istrav/ and must be unique istrav.net wide.</p>
       </div>
       <div class="input-field col s12">
         <p>Root Owner:</p>

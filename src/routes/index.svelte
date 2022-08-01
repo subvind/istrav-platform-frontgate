@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-  <title>/community_folder/: Bulletin Board System</title>
+  <title>/istrav/: Bulletin Board System</title>
 </svelte:head>
 
 <Navigation />
@@ -33,7 +33,7 @@
       </div>
       <div class="title">
         <a href="/">
-          https://communityfolder.com
+          https://istrav.net
         </a>
       </div>
       <div class="box">
@@ -52,7 +52,7 @@
         <br />
         <div class="stamp">
           <a class="logo" href="/">
-            /community_folder/
+            /istrav/
           </a>
         </div>
         <br />
@@ -70,7 +70,7 @@
         <br />
       </div>
     </div>
-    <footer>© {new Date().getFullYear()} <a href="https://communityfolder.com">communityfolder.com</a>. All rights reserved.</footer>
+    <footer>© {new Date().getFullYear()} <a href="https://istrav.net">istrav.net</a>. All rights reserved.</footer>
   </div>
   <br />
   <br />

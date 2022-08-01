@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  let community = 'communityfolder.com'
+  let community = 'istrav.net'
   let folder = 'istrav'
   let featured = {
     name: 'istrav',
@@ -37,7 +37,7 @@
     <div class="folder">
 
       <div class="register">
-        <div class="community_folder">
+        <div class="istrav">
           /v/{folder}/
         </div>
         <br />
@@ -119,7 +119,7 @@
           <div class="col l6">
             <h5 class="grey-text text-lighten-4"><span style="font-weight: 900; font-size: 1.5em;">{featured.name}</span>:<br />{featured.about}</h5>
             <br />
-            <a href={`https://${featured.name}.communityfolder.com`} class="btn btn-small white black-text">Checkout</a>
+            <a href={`https://${featured.name}.istrav.net`} class="btn btn-small white black-text">Checkout</a>
             <br />
             <br />
           </div>
@@ -138,7 +138,7 @@
 </div>
 
 <style>
-  .community_folder {
+  .istrav {
     display: flex;
     background-color: #000;
     font-size: 2em;

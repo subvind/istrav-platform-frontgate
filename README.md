@@ -1,13 +1,13 @@
-communityfolder.com
+istrav.net
 =======
 Allows customers to sign into a client area and create/pay/run/manage website(s) or "tenants" that are powered by communityfolder.
 
 Allows anyone to search and find websites that are powered by communityfolder.
 
-https://communityfolder.com
+https://istrav.net
 
 main:
-- https://github.com/trabur/communityfolder.com
+- https://github.com/trabur/istrav.net
 
 source code:
 - https://github.com/trabur/communityfolder-backend

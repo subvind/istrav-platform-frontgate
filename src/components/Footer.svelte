@@ -9,7 +9,7 @@
         <br />
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">/community_folder/</h5>
+        <h5 class="white-text">/istrav/</h5>
         <ul>
           <li><a class="grey-text text-lighten-3" href="//istrav.com/production">Production</a></li>
           <li><a class="grey-text text-lighten-3" href="//istrav.com/solutions">Solutions</a></li>
@@ -24,7 +24,7 @@
     <div class="container">
 
     <span>
-      <a href="https://communityfolder.com" class="copyright">/community_folder/</a> © {new Date().getFullYear()}. Made with <span>♥</span> by <a href="https://istrav.com" class="white-text">istrav.com</a>.
+      <a href="https://istrav.net" class="copyright">/istrav/</a> © {new Date().getFullYear()}. Made with <span>♥</span> by <a href="https://istrav.com" class="white-text">istrav.com</a>.
     </span>
     <a class="grey-text text-lighten-4 right" href="/terms-and-conditions">Terms & Conditions</a>
     <span class="right" style="padding: 0 1em;"> • </span>

@@ -56,7 +56,7 @@
     <div class="row">
       <div class="input-field col s12">
         <p>The Team:</p>
-        <p>Are you interested in becoming a webmaster? Join an exciting team of developers and coders here at /community_folder/ by submitting your resume to us and then tell us a bit about the position you are applying for.</p>
+        <p>Are you interested in becoming a webmaster? Join an exciting team of developers and coders here at /istrav/ by submitting your resume to us and then tell us a bit about the position you are applying for.</p>
       </div>
       <div class="input-field col s12">
         <input id="resumeLink" type="text" class="validate" bind:value={resumeLink}>

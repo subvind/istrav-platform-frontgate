@@ -5,7 +5,7 @@
   </script>
   
   <svelte:head>
-    <title>Create Network - /community_folder/</title>
+    <title>Create Network - /istrav/</title>
   </svelte:head>
   
   <Navigation />

@@ -105,12 +105,12 @@
           <div class="input-field col s6">
             <input placeholder="for-example.com" id="first_name" type="text" class="validate" bind:value={domainName}>
             <label for="first_name">Domain Name</label>
-            <p>This is the address to your website; for example: (communityfolder.com) or (istrav.com).</p>
+            <p>This is the address to your website; for example: (istrav.net) or (istrav.com).</p>
           </div>
           <div class="input-field col s6">
             <input placeholder="For Example" id="last_name" type="text" class="validate" bind:value={displayName}>
             <label for="last_name">Display Name</label>
-            <p>This is the viewable address as it should be branded; for example: (/community_folder/) or (isTrav).</p>
+            <p>This is the viewable address as it should be branded; for example: (/istrav/) or (isTrav).</p>
           </div>
         </div>
         <div class="row">

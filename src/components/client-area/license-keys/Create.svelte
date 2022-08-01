@@ -65,7 +65,7 @@
           <div class="input-field col s6">
             <input placeholder="for-example.com" id="first_name" type="text" class="validate" bind:value={domainName}>
             <label for="first_name">Domain Name</label>
-            <p>This is the address to your website; for example: (communityfolder.com) or (istrav.com).</p>
+            <p>This is the address to your website; for example: (istrav.net) or (istrav.com).</p>
           </div>
         </div>
       </div>

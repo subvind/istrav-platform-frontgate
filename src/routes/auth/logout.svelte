@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-  <title>Logout: /community_folder/</title>
+  <title>Logout: /istrav/</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 </svelte:head>

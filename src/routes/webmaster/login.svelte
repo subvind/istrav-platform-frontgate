@@ -29,7 +29,7 @@
 </script>
 
 <svelte:head>
-  <title>Login: /community_folder/</title>
+  <title>Login: /istrav/</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 </svelte:head>
@@ -53,7 +53,7 @@
       </div>
       <div class="title">
         <a href="/">
-          /community_folder/
+          /istrav/
         </a>
       </div>
       <div class="box">
@@ -63,7 +63,7 @@
         <br />
         <br />
         <div class="stamp">
-          <a class="logo" href="https://communityfolder.com">
+          <a class="logo" href="https://istrav.net">
             /login/
           </a>
         </div>
@@ -76,7 +76,7 @@
         <br />
       </div>
     </div>
-    <footer>© {new Date().getFullYear()} <a href="https://communityfolder.com">communityfolder.com</a>. All rights reserved.</footer>
+    <footer>© {new Date().getFullYear()} <a href="https://istrav.net">istrav.net</a>. All rights reserved.</footer>
     <br />
     <br />
     <br />
