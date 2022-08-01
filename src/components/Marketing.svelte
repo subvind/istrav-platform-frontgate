@@ -1,10 +1,10 @@
 <script>
   import { onMount } from "svelte";
 
-  let community = 'istrav.net'
-  let folder = 'istrav'
+  let network = 'istrav.net'
+  let socialGroup = 'meta'
   let featured = {
-    name: 'istrav',
+    name: 'meta',
     about: 'This is a Bulletin Board System for talking about application software development, building projects, deploying solutions to production, and integration with artificial inteligence.'
   }
   let isCreate = true
@@ -23,22 +23,22 @@
   <br />
   <div class="container">
     <div style="max-width: 600px; margin: 0 auto;">
-      <h2 class="title">Networks</h2>
+      <h2 class="title">Social Groups</h2>
       <h3 class="description">Where ideas are driven and oriented around multi-layered bulletin board systems.</h3>
     </div>
     <br />
     <br />
     <div style="height: 4.2em;">
-      <div class="folder-tabs">
+      <div class="socialGroup-tabs">
         <button on:click={() => {isCreate = true; setTimeout(() => window.M.updateTextFields())}} class={`btn btn-large ${isCreate ? `red lighten-2` : `grey black-text`}`}>Create</button>
         <button on:click={() => isCreate = false} class={`btn btn-large ${isCreate ? `grey black-text` : `red lighten-2`}`}>Search</button>
       </div>
     </div>
-    <div class="folder">
+    <div class="socialGroup">
 
       <div class="register">
         <div class="istrav">
-          /v/{folder}/
+          /v/{socialGroup}/
         </div>
         <br />
         <br />
@@ -47,17 +47,17 @@
             <form class="col s12">
               <div class="row" style="margin: 0;">
                 <div class="input-field col s6">
-                  <input placeholder="" id="first_name" type="text" class="validate" bind:value={folder}>
-                  <label for="first_name">Folder</label>
+                  <input placeholder="" id="first_name" type="text" class="validate" bind:value={socialGroup}>
+                  <label for="first_name">Social Group</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="last_name" type="text" class="validate" bind:value={community}>
-                  <label for="last_name">Community</label>
+                  <input id="last_name" type="text" class="validate" bind:value={network}>
+                  <label for="last_name">Network</label>
                 </div>
               </div>
               <div class="row" style="margin: 0;">
                 <div class="col s8">
-                  <a href={`//${folder}.${community}`} class="btn white black-text fluid" target="_blank">https://{folder}.{community}</a>
+                  <a href={`//${socialGroup}.${network}`} class="btn white black-text fluid" target="_blank">https://{socialGroup}.{network}</a>
                 </div>
                 <div class="col s4">
                   <button class="btn blue lighten-2 fluid">register</button>
@@ -106,7 +106,7 @@
         {/if}
         <br />
       </div>
-      <div class="folder-footer">
+      <div class="socialGroup-footer">
         <div class="row" style="margin: 0;">
           <div class="col l6">
   
@@ -151,7 +151,7 @@
     position: absolute;
     color: #fff;
   }
-  .folder {
+  .socialGroup {
     box-shadow: 0 0 5em #333;
   }
   .container {
@@ -173,7 +173,7 @@
     width: 100%;
   }
 
-  .folder-tabs {
+  .socialGroup-tabs {
     float: right;
     overflow: hidden;
     background: #111;
@@ -181,7 +181,7 @@
     margin-right: 2em;
   }
 
-  .folder-footer {
+  .socialGroup-footer {
     border: 5px solid #000;
     border-top: 0;
     padding: 1em;
