@@ -1,10 +1,20 @@
+<script lang="ts">
+  import { onMount } from "svelte";
+
+  let host: string
+
+  onMount(() => {
+    host = window.location.host
+  })
+</script>
+
 <footer>
   <nav class="white black-text">
     <div class="container">
       <div class="nav-wrapper">
         <ul class="">
-          <li class=""><a href="/" target="_blank">/istrav/ © {new Date().getFullYear()}.</a></li>
-          <li class=""><a href="https://istrav.com" target="_blank">Made with &hearts; by istrav.com.</a></li>
+          <li class=""><a href="/" target="_blank">{host} © {new Date().getFullYear()}.</a></li>
+          <li class=""><a href="https://istrav.com" target="_blank">Made with &hearts; by isTrav.</a></li>
         </ul>
         <ul class="right">
           <li><a href={`https://istrav.com`}>Website</a></li>
