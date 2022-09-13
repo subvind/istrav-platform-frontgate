@@ -21,16 +21,16 @@
     }
   })
 </script>
-<nav class="members-only blue lighten-2">
+<nav class="members-only grey black-text">
   <div class="nav-wrapper">
     <div class="container">
-      <a href="/" class="brand-logo"><i class="large material-icons">lock</i>Members Only</a>
+      <a href="/" class="brand-logo black-text"><i class="large material-icons">lock</i>Members Only</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         {#if authenticated}
-          <li><a href={`/accounts/${token.id}`}>{token.email}</a></li>
+          <li><a href={`/accounts/${token.id}`} class="black-text">{token.email}</a></li>
         {:else}
-          <li><a href="/auth/login">Login</a></li>
-          <li><a href="/auth/register">Register</a></li>
+          <li><a href="/auth/login" class="black-text">Login</a></li>
+          <li><a href="/auth/register" class="black-text">Register</a></li>
         {/if}
       </ul>
     </div>

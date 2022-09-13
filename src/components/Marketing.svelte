@@ -30,8 +30,8 @@
     <br />
     <div style="height: 4.2em;">
       <div class="socialGroup-tabs">
-        <button on:click={() => {isCreate = true; setTimeout(() => window.M.updateTextFields())}} class={`btn btn-large ${isCreate ? `red lighten-2` : `grey black-text`}`}>Create</button>
-        <button on:click={() => isCreate = false} class={`btn btn-large ${isCreate ? `grey black-text` : `red lighten-2`}`}>Search</button>
+        <button on:click={() => {isCreate = true; setTimeout(() => window.M.updateTextFields())}} class={`btn btn-large ${isCreate ? `blue lighten-2` : `grey black-text`}`}>Create</button>
+        <button on:click={() => isCreate = false} class={`btn btn-large ${isCreate ? `grey black-text` : `blue lighten-2`}`}>Search</button>
       </div>
     </div>
     <div class="socialGroup">
