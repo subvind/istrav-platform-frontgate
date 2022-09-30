@@ -18,7 +18,7 @@
         </ul>
         <ul class="right">
           <li><a href={`https://istrav.com`}>Website</a></li>
-          <li><a href={`https://stream.istrav.dev`}>Stream</a></li>
+          <li><a href={`https://istrav.live`}>Live</a></li>
           <li><a href={`https://istrav.dev`}>Headquarters</a></li>
         </ul>
       </div>
