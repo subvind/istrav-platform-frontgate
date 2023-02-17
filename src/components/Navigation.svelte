@@ -34,13 +34,13 @@
                 <a href="//istrav.com/production" class="black-text">Production</a>
               </li>
               <li>
-                <a href="//istrav.com/solutions" class="black-text">Solutions</a>
-              </li>
-              <li>
-                <a href="//istrav.com/apps" class="black-text">Apps</a>
+                <a href="//istrav.com/innovation" class="black-text">Innovation</a>
               </li>
               <li>
                 <a href="//istrav.com/platforms" class="black-text">Platforms</a>
+              </li>
+              <li>
+                <a href="//istrav.com/apps" class="black-text">Apps</a>
               </li>
               <li>
                 <a href="//istrav.com/projects" class="black-text">Projects</a>
